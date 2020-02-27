@@ -1,0 +1,14 @@
+@mixin size($width, $min-height) {
+  width: $width;
+  min-height: $min-height;
+}
+
+@mixin list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin link {
+  text-decoration: none;
+}
