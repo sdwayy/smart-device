@@ -1,0 +1,44 @@
+.about-us {
+  padding-top: 5.8%;
+  background-image: url("img/advantage-background-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("/img/advantage-background-desktop@2x.jpg");
+  }
+}
+
+.about-us__advantages {
+  margin-bottom: 8.7%;
+}
+
+@media (max-width: $desktop-width) {
+  .about-us {
+    padding-top: 7%;
+    background-image: url("/img/triangle-advantage-tablet.jpg");
+    background-position: center right;
+    background-size: 297px 590px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/triangle-advantage-tablet@2x.jpg");
+    }
+  }
+
+  .about-us__advantages {
+    margin-bottom: 8.2%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about-us {
+    padding-top: 11.5%;
+    background-image: url("/img/triangle-advantage-mobile.jpg");
+    background-size: 175px 559px;
+    background-position: bottom 365px right;
+  }
+
+  .about-us__advantages {
+    margin-bottom: 25%;
+  }
+}

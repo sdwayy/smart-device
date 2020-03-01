@@ -29,8 +29,29 @@
   }
 }
 
+.page-header__scroll-btn {
+  @include link;
+
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: $second-color;
+  background-color: transparent;
+  opacity: 0.5;
+  transform: rotate(-90deg) translateY(-40px);
+
+  &:hover {
+    opacity: 1;
+    transition: $transition-time;
+  }
+}
+
 @media (max-width: $desktop-width) {
   .page-header {
+    min-height: 686px;
     padding-top: 2.2%;
   }
 
@@ -44,9 +65,14 @@
 }
 
 @media (max-width: $tablet-width) {
+  .page-header {
+    min-height: 646px;
+  }
+
   .page-header__top {
     margin-bottom: 4.3%;
     padding-left: 2%;
+    padding-right: 2%;
     letter-spacing: 0.7em;
   }
 

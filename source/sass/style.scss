@@ -2,8 +2,13 @@
 @import "./abstracts/mixins";
 @import "./base/normalize";
 @import "./base/global";
+@import "./base/visually-hidden";
 @import "./components/btn";
 @import "./grid/container";
 @import "./blocks/page-header";
 @import "./blocks/contact-us";
+@import "./blocks/advantages";
 @import "./blocks/company-description";
+@import "./blocks/about-company";
+@import "./blocks/about-us";
+@import "./blocks/page-main";

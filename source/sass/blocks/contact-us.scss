@@ -86,3 +86,9 @@
     }
   }
 }
+
+@media (max-width: $tablet-width) {
+  .contact-us__link {
+    margin-right: 22px;
+  }
+}

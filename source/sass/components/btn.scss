@@ -20,16 +20,20 @@
     font-size: 14px;
     line-height: 16px;
     background-color: transparent;
+
+    &:hover {
+      background-color: darken($main-color, 10%);
+      transition: $transition-time;
+    }
   }
 
   &--transparent-main-color {
+    padding: 14px 50px;
     border-color: $main-color;
     color: $main-color;
 
     &:hover {
-      border-color: lighten($main-color, 20%);
-      opacity: 0.5;
-      transition: $transition-time;
+      color: $second-color;
     }
   }
 
@@ -38,8 +42,7 @@
     color: $second-color;
 
     &:hover {
-      border-color: lighten($main-color, 20%);
-      transition: $transition-time;
+      border-color: $main-color;
     }
   }
 
@@ -86,13 +89,16 @@
     &--transparent-main-color {
       &:hover {
         border-color: $main-color;
-        opacity: 1;
+        color: $main-color;
+        background-color: transparent;
       }
     }
 
     &--transparent-second-color {
       &:hover {
         border-color: $second-color;
+        color: $second-color;
+        background-color: transparent;
       }
     }
 
