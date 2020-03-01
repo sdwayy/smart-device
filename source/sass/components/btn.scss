@@ -1,0 +1,113 @@
+.btn {
+  padding: 14px 27px;
+  border-radius: 5px;
+
+  font-family: $second-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.7;
+    transition: $transition-time;
+  }
+
+  &--transparent-main-color,
+  &--transparent-second-color {
+    border: 1px;
+    border-style: solid;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: transparent;
+  }
+
+  &--transparent-main-color {
+    border-color: $main-color;
+    color: $main-color;
+
+    &:hover {
+      border-color: lighten($main-color, 20%);
+      opacity: 0.5;
+      transition: $transition-time;
+    }
+  }
+
+  &--transparent-second-color {
+    border-color: $second-color;
+    color: $second-color;
+
+    &:hover {
+      border-color: lighten($main-color, 20%);
+      transition: $transition-time;
+    }
+  }
+
+  &--color {
+    padding: 20px 45px;
+    border: none;
+    font-size: 16px;
+    line-height: 19px;
+    color: $second-color;
+    background-color: $main-color;
+
+    &:hover {
+      background-color: darken($main-color, 10%);
+      transition: $transition-time;
+    }
+  }
+
+  &--scroll {
+    padding: 0;
+    border: none;
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: none;
+    letter-spacing: normal;
+    color: $second-color;
+    background-color: transparent;
+    opacity: 0.5;
+    transform: rotate(-90deg) translateY(-40px);
+
+    &:hover {
+      opacity: 1;
+      transition: $transition-time;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .btn {
+    &:hover {
+      transition: none;
+    }
+
+    &--transparent-main-color {
+      &:hover {
+        border-color: $main-color;
+        opacity: 1;
+      }
+    }
+
+    &--transparent-second-color {
+      &:hover {
+        border-color: $second-color;
+      }
+    }
+
+    &--color {
+      padding: 17px 31px;
+
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+
+    &--scroll {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.contact-us {
+  display: flex;
+  align-items: center;
+  min-width: 46.8%;
+  max-width: 60%;
+}
+
+.contact-us__links {
+  @include list;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3%;
+
+  a {
+    @include link;
+    position: relative;
+    display: block;
+  }
+}
+
+.contact-us__link {
+  margin-right: 88px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    transition: $transition-time;
+  }
+
+  &:active {
+    opacity: 0.4;
+    transition: $transition-time;
+  }
+}
+
+.contact-us__link-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.contact-us__request-call-btn {
+  margin-left: auto;
+}
+
+@media (max-width: $desktop-width) {
+  .contact-us {
+    justify-content: flex-end;
+  }
+
+  .contact-us__links {
+    margin-right: 0;
+  }
+
+  .contact-us__link {
+    margin-right: 33px;
+
+    span {
+      @include visually-hidden;
+    }
+
+    &:hover {
+      opacity: 1;
+      transition: none;
+    }
+  }
+
+  .contact-us__request-call-btn {
+    @include visually-hidden;
+  }
+
+  .contact-us__link-icon {
+    margin-right: 0;
+
+    &--mail {
+      width: 25px;
+      height: 18px;
+    }
+
+    &--phone {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

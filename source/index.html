@@ -4,10 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Smart Device</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__container container">
+      <div class="page-header__top">
+        <a class="page-header__logo page-header__logo--desktop">
+          <img src="/img/logo-header-desktop.png" alt="Логотип компании" width="205" height="55" srcset="/img/logo-header-desktop@2x.png 2x">
+        </a>
+        <a class="page-header__logo page-header__logo--mobile">
+          <svg width="38" height="38">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+        <div class="page-header__сontact-us contact-us">
+          <ul class="contact-us__links">
+            <li class="contact-us__link">
+              <a href="mailto:info@sd.ru" class="contact-us__mail-link">
+                <svg class="contact-us__link-icon contact-us__link-icon--mail" width="19" height="14">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+                <span>info@sd.ru</span>
+              </a>
+            </li>
+            <li class="contact-us__link">
+              <a href="tel:+74950005252" class="contact-us__phone-link">
+                <svg class="contact-us__link-icon contact-us__link-icon--phone" width="17" height="17">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+                <span>+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
+          <button class="contact-us__request-call-btn btn btn--transparent-second-color">
+            Заказать звонок
+          </button>
+        </div>
+      </div>
+      <div class="page-header__company-description company-description">
+        <div class="company-description__wrapper">
+          <p class="company-description__title">
+            Печатные платы
+          </p>
+          <p class="company-description__description">
+            производство и монтаж, поставка комплектующих, блоков и модулей
+          </p>
+          <button type="button" class="company-description__btn company-description__btn--desktop btn btn--color">
+            Получить бесплатную консультацию
+          </button>
+          <button type="button" class="company-description__btn company-description__btn--mobile btn btn--color">
+            Бесплатная консультация
+          </button>
+        </div>
+        <div class="company-description__production-img">
+          <picture>
+            <source type="image/webp" srcset="img/circuit-desktop.webp 1x, img/circuit-desktop@2x.webp 2x">
+            <img class="company-description__circuit-img" src="img/circuit-desktop.png" alt="Печатная плата" width="705" height="515" srcset="img/circuit-desktop@2x.png 2x">
+          </picture>
+        </div>
+      </div>
+      <button type="button" class="page-header__scroll-btn btn btn--scroll">
+        Скролл вниз
+      </button>
+    </div>
+  </header>
 </body>
 </html>

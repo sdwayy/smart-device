@@ -1,0 +1,63 @@
+.page-header {
+  min-height: 878px;
+  padding-top: 1.4%;
+  color: $second-color;
+  background-color: $second-background-color;
+  background-image: url("/img/header-background-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("/img/header-background-desktop@2x.png");
+  }
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 11%;
+}
+
+.page-header__company-description {
+  margin-bottom: 9%;
+}
+
+.page-header__logo {
+  &--mobile {
+    display: none;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .page-header {
+    padding-top: 2.2%;
+  }
+
+  .page-header__top {
+    margin-bottom: 12%;
+  }
+
+  .page-header__scroll-btn {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-header__top {
+    margin-bottom: 4.3%;
+    padding-left: 2%;
+    letter-spacing: 0.7em;
+  }
+
+  .page-header__logo {
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+      padding-top: 3.2%;
+    }
+  }
+}
