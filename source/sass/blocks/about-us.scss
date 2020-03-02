@@ -1,5 +1,6 @@
 .about-us {
   padding-top: 5.8%;
+  padding-bottom: 6%;
   background-image: url("img/advantage-background-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,6 +17,7 @@
 @media (max-width: $desktop-width) {
   .about-us {
     padding-top: 7%;
+    padding-bottom: 10%;
     background-image: url("/img/triangle-advantage-tablet.jpg");
     background-position: center right;
     background-size: 297px 590px;
@@ -33,6 +35,7 @@
 @media (max-width: $tablet-width) {
   .about-us {
     padding-top: 11.5%;
+    padding-bottom: 20%;
     background-image: url("/img/triangle-advantage-mobile.jpg");
     background-size: 175px 559px;
     background-position: bottom 365px right;

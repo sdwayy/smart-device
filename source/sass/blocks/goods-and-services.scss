@@ -1,0 +1,215 @@
+.goods-and-services {
+  padding-top: 4.5%;
+  padding-bottom: 4.3%;
+  font-family: $second-font;
+  color: $second-color;
+  background-color: $second-background-color;
+
+  h2 ~ p {
+    margin-top: 0;
+    margin-bottom: 4.5%;
+  }
+
+  p {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  h3 {
+    margin: 0;
+    padding-right: 30%;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  ul {
+    @include list;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    position: relative;
+    width: 31.6%;
+    min-height: 620px;
+    margin-right: 2.5%;
+    margin-bottom: 4%;
+    z-index: 0;
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        opacity: $hover-state-opacity;
+        transition: $transition-time;
+      }
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+      transition: $transition-time;
+    }
+  }
+
+  a {
+    @include link;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 13% 12%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 63px;
+      height: 63px;
+      background-color: $main-color;
+      background-image: url("/img/arrow-btn-white.svg");
+      background-size: 8px;
+      background-repeat: no-repeat;
+      background-position: right 45% center;
+    }
+
+    &:hover {
+      &::after {
+        transition: $transition-time;
+        background-color: $second-color;
+        background-image: url("/img/arrow-btn-blue.svg");
+        background-size: 12px;
+      }
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+    }
+  }
+}
+
+.goods-and-services__item {
+  &--manufacturing {
+    &::before {
+      background-image: url("/img/manufacturing-desktop.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("/img/manufacturing-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--mounting {
+    &::before {
+      background-image: url("/img/mounting-desktop.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("/img/mounting-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--components {
+    &::before {
+      background-image: url("/img/components-desktop.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("/img/components-desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .goods-and-services {
+    padding-top: 6.2%;
+
+    h2 ~ p {
+      margin-bottom: 7.1%;
+    }
+
+    p {
+      padding-right: 15%;
+      font-size: 32px;
+      line-height: 140.62%;
+    }
+
+    h3 {
+      padding-right: 72%;
+    }
+
+    ul {
+      flex-direction: column;
+    }
+
+    li {
+      width: 100%;
+      min-height: 255px;
+      margin-bottom: 6.4%;
+
+      &:hover {
+        &::before {
+          opacity: 0.2;
+        }
+      }
+    }
+
+    a {
+      padding-top: 5.7%;
+      padding-left: 6.8%;
+
+      &:hover {
+        &::after {
+          background-color: $main-color;
+          background-image: url("/img/arrow-btn-white.svg");
+          background-size: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .goods-and-services {
+    padding-top: 15.2%;
+
+    h2 ~ p {
+      margin-bottom: 13.2%;
+      padding-right: 1%;
+      padding-left: 5%;
+      font-size: 28px;
+    }
+
+    h3 {
+      padding-right: 30%;
+    }
+
+    a {
+      padding-top: 7.5%;
+      padding-left: 14%;
+    }
+
+    li {
+      margin-bottom: 10.4%;
+    }
+  }
+}
