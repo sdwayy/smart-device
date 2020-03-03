@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 9.3%;
+  padding-top: 5.8%;
   padding-bottom: 4.3%;
   color: $description-font-color;
 
@@ -68,7 +68,7 @@
 
 @media (max-width: $desktop-width) {
   .advantages {
-    padding-top: 7.4%;
+    padding-top: 6.8%;
     padding-bottom: 3.5%;
 
     .advantages__item {

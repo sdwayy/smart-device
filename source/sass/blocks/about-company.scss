@@ -1,9 +1,9 @@
 .about-company {
   position: relative;
-  padding-top: 5%;
-  padding-right: 1%;
-  padding-bottom: 9.4%;
-  padding-left: 180px;
+  padding-top: 1%;
+  padding-right: 7.2%;
+  padding-bottom: 6%;
+  padding-left: 300px;
   color: $description-font-color;
   z-index: 1;
 
@@ -28,8 +28,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 60px;
-    left: -3%;
+    top: 25px;
+    left: 6.5%;
     display: block;
     width: 317px;
     height: 320px;
@@ -46,7 +46,7 @@
 
 @media (max-width: $desktop-width) {
   .about-company {
-    padding-top: 4.5%;
+    padding-top: 3.5%;
     padding-right: 0.5%;
     padding-bottom: 11.3%;
     padding-left: 190px;
@@ -67,7 +67,7 @@
 
     &::before {
       content: "";
-      top: 35px;
+      top: 27px;
       left: -2.5%;
       width: 362px;
       height: 352px;

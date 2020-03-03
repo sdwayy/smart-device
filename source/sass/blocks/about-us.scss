@@ -1,7 +1,8 @@
 .about-us {
   background-image: url("/img/advantage-background-desktop.jpg");
+  background-position: 23% top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("/img/advantage-background-desktop@2x.jpg");
@@ -12,7 +13,7 @@
 @media (max-width: $desktop-width) {
   .about-us {
     background-image: url("/img/triangle-advantage-tablet.jpg");
-    background-position: center right;
+    background-position: right 37.5%;
     background-size: 297px 590px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -25,6 +26,6 @@
   .about-us {
     background-image: url("/img/triangle-advantage-mobile.jpg");
     background-size: 175px 559px;
-    background-position: bottom 365px right;
+    background-position: right 63.2%;
   }
 }
