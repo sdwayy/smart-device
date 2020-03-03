@@ -1,16 +1,12 @@
 .advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 9.3%;
   padding-bottom: 4.3%;
   color: $description-font-color;
-}
 
-.advantages__list {
-  @include list;
-  display: flex;
-  flex-wrap: wrap;
-
-  li {
-    margin-right: 2.8%;
+  .advantages__item {
     margin-bottom: 2.8%;
 
     &:nth-of-type(2n) {
@@ -74,11 +70,8 @@
   .advantages {
     padding-top: 7.4%;
     padding-bottom: 3.5%;
-  }
 
-  .advantages__list {
-    li {
-      margin-right: 4%;
+    .advantages__item {
       margin-bottom: 3.3%;
     }
   }
@@ -108,9 +101,8 @@
 }
 
 @media (max-width: $tablet-width) {
-  .advantages__list {
-    li {
-      margin-right: 0;
+  .advantages {
+    .advantages__item {
       margin-bottom: 7%;
 
       &:nth-last-of-type(2) {

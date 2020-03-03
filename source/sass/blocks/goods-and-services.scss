@@ -1,12 +1,14 @@
-.goods-and-services__container {
-  padding-top: 4.5%;
-  padding-bottom: 4.3%;
+.goods-and-services {
+  background-color: $second-background-color;
 }
 
-.goods-and-services {
+.goods-and-services__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 4.5%;
+  padding-bottom: 4.3%;
   font-family: $second-font;
   color: $second-color;
-  background-color: $second-background-color;
 
   h2 {
     margin-top: 0;
@@ -24,14 +26,7 @@
     line-height: 30px;
   }
 
-  ul {
-    @include list;
-
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  li {
+  div {
     position: relative;
     width: 31.6%;
     min-height: 620px;
@@ -142,10 +137,9 @@
 
 @media (max-width: $desktop-width) {
   .goods-and-services__container {
+    flex-direction: column;
     padding-top: 6.2%;
-  }
 
-  .goods-and-services {
     h2 {
       margin-bottom: 7.1%;
       padding-right: 15%;
@@ -157,11 +151,7 @@
       padding-right: 72%;
     }
 
-    ul {
-      flex-direction: column;
-    }
-
-    li {
+    div {
       width: 100%;
       min-height: 255px;
       margin-bottom: 6.4%;
@@ -191,11 +181,7 @@
 @media (max-width: $tablet-width) {
   .goods-and-services__container {
     padding-top: 15.2%;
-  }
-
-  .goods-and-services {
-    padding-top: 15.2%;
-
+    padding-bottom: 12%;
     h2 {
       margin-bottom: 13.2%;
       padding-right: 1%;
@@ -212,7 +198,7 @@
       padding-left: 14%;
     }
 
-    li {
+    div {
       margin-bottom: 10.4%;
     }
   }

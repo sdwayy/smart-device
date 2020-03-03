@@ -8,6 +8,10 @@
   letter-spacing: 0.05em;
   cursor: pointer;
 
+  &:hover {
+    transition: $transition-time;
+  }
+
   &:active {
     opacity: $active-state-opacity;
     transition: $transition-time;
@@ -23,7 +27,6 @@
 
     &:hover {
       background-color: $main-color;
-      transition: $transition-time;
     }
   }
 
@@ -47,6 +50,9 @@
   }
 
   &--color {
+    @include link;
+    display: inline-block;
+    vertical-align: baseline;
     padding: 20px 45px;
     border: none;
     font-size: 16px;
@@ -57,7 +63,21 @@
     &:hover {
       border: 1px solid $second-color;
       background-color: transparent;
-      transition: $transition-time;
+    }
+  }
+
+  &--color-with-border {
+    border: 1px solid $second-color;
+    padding: 14px 79px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $second-color;
+    background-color: $main-color;
+
+    &:hover {
+      border-color: $main-color;
+      background-color: $second-color;
+      color: $main-color;
     }
   }
 }
@@ -97,6 +117,23 @@
       &:hover {
         opacity: 1;
       }
+    }
+
+    &--color-with-border {
+      &:hover {
+        border-color: $second-color;
+        background-color: $main-color;
+        color: $second-color;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .btn {
+    &--color-with-border {
+      width: 100%;
+      height: 46.65px;
     }
   }
 }
