@@ -1,23 +1,24 @@
-.goods-and-services {
+.goods-and-services__container {
   padding-top: 4.5%;
   padding-bottom: 4.3%;
+}
+
+.goods-and-services {
   font-family: $second-font;
   color: $second-color;
   background-color: $second-background-color;
 
-  h2 ~ p {
+  h2 {
     margin-top: 0;
     margin-bottom: 4.5%;
-  }
-
-  p {
+    font-weight: normal;
     font-size: 36px;
     line-height: 51px;
   }
 
   h3 {
     margin: 0;
-    padding-right: 30%;
+    padding-right: 45%;
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
@@ -140,14 +141,13 @@
 }
 
 @media (max-width: $desktop-width) {
-  .goods-and-services {
+  .goods-and-services__container {
     padding-top: 6.2%;
+  }
 
-    h2 ~ p {
+  .goods-and-services {
+    h2 {
       margin-bottom: 7.1%;
-    }
-
-    p {
       padding-right: 15%;
       font-size: 32px;
       line-height: 140.62%;
@@ -189,10 +189,14 @@
 }
 
 @media (max-width: $tablet-width) {
+  .goods-and-services__container {
+    padding-top: 15.2%;
+  }
+
   .goods-and-services {
     padding-top: 15.2%;
 
-    h2 ~ p {
+    h2 {
       margin-bottom: 13.2%;
       padding-right: 1%;
       padding-left: 5%;

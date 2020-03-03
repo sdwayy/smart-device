@@ -1,4 +1,6 @@
 .advantages {
+  padding-top: 9.3%;
+  padding-bottom: 4.3%;
   color: $description-font-color;
 }
 
@@ -6,6 +8,20 @@
   @include list;
   display: flex;
   flex-wrap: wrap;
+
+  li {
+    margin-right: 2.8%;
+    margin-bottom: 2.8%;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+
+    &:last-of-type,
+    &:nth-last-of-type(2) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .advantages__item-icon {
@@ -16,8 +32,6 @@
 .advantages__item {
   width: 48.6%;
   min-height: 299px;
-  margin-right: 2.8%;
-  margin-bottom: 2.8%;
   border: 1px solid #ebebeb;
   border-left: 3px solid $main-color;
   padding-top: 3.1%;
@@ -25,15 +39,6 @@
   padding-bottom: 3%;
   padding-left: 3.4%;
   background-color: $second-color;
-
-  &:nth-of-type(2n) {
-    margin-right: 0;
-  }
-
-  &:last-of-type,
-  &:nth-last-of-type(2) {
-    margin-bottom: 0;
-  }
 
   h3 {
     margin-top: 0;
@@ -66,11 +71,21 @@
 }
 
 @media (max-width: $desktop-width) {
+  .advantages {
+    padding-top: 7.4%;
+    padding-bottom: 3.5%;
+  }
+
+  .advantages__list {
+    li {
+      margin-right: 4%;
+      margin-bottom: 3.3%;
+    }
+  }
+
   .advantages__item {
     width: 48%;
     min-height: 235px;
-    margin-right: 4%;
-    margin-bottom: 3.3%;
     border-left-width: 2px;
 
     &:hover {
@@ -93,23 +108,34 @@
 }
 
 @media (max-width: $tablet-width) {
+  .advantages__list {
+    li {
+      margin-right: 0;
+      margin-bottom: 7%;
+
+      &:nth-last-of-type(2) {
+        margin-bottom: 7%;
+      }
+    }
+  }
+
+  .advantages {
+    padding-top: 13%;
+    padding-bottom: 7%;
+  }
+
   .advantages__item {
     width: 96.1%;
-    min-height: 232px;
-    margin-right: 0;
-    margin-bottom: 7%;
-    padding-top: 8.8%;
-    padding-left: 9%;
-    padding-right: 6%;
-    padding-bottom: 3%;
+    min-height: 244px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 7px;
+    padding-bottom: 25px;
 
     h3 {
+      padding-right: 2%;
       font-size: 20px;
       line-height: 140.62%;
-    }
-
-    &:nth-last-of-type(2) {
-      margin-bottom: 7%;
     }
   }
 

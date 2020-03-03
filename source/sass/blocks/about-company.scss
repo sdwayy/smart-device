@@ -1,5 +1,8 @@
 .about-company {
   position: relative;
+  padding-top: 5%;
+  padding-right: 1%;
+  padding-bottom: 9.4%;
   padding-left: 180px;
   color: $description-font-color;
   z-index: 1;
@@ -15,22 +18,17 @@
 
   p {
     margin-top: 0;
-    margin-bottom: 2%;
-    padding-right: 1%;
-  }
-
-  p:nth-last-of-type(2) {
     margin-bottom: 3.7%;
   }
 
-  p:last-of-type {
-    display: none;
+  p:nth-last-of-type(2) {
+    margin-bottom: 2%;
   }
 
   &::before {
     content: "";
     position: absolute;
-    top: 5px;
+    top: 60px;
     left: -3%;
     display: block;
     width: 317px;
@@ -48,32 +46,29 @@
 
 @media (max-width: $desktop-width) {
   .about-company {
-    padding-left: 186px;
+    padding-top: 4.5%;
+    padding-right: 0.5%;
+    padding-bottom: 11.3%;
+    padding-left: 190px;
 
     h2 {
-      margin-bottom: 5%;
+      margin-bottom: 4.8%;
       font-size: 32px;
       line-height: 140.62%;
     }
 
     p {
-      margin-bottom: 4%;
-      padding-right: 1%;
+      margin-bottom: 8%;
     }
 
     p:nth-last-of-type(2) {
-      display: none;
-    }
-
-    p:last-of-type {
-      display: block;
-      margin-bottom: 7.8%;
+      margin-bottom: 3.5%;
     }
 
     &::before {
       content: "";
-      top: -1%;
-      left: -2%;
+      top: 35px;
+      left: -2.5%;
       width: 362px;
       height: 352px;
       background-image: url("/img/date-tablet.jpg");
@@ -87,20 +82,22 @@
 
 @media (max-width: $tablet-width) {
   .about-company {
+    padding-top: 10%;
     padding-left: 2%;
+    padding-bottom: 20.4%;
 
     h2 {
-      margin-bottom: 6.8%;
+      margin-bottom: 20px;
       font-size: 28px;
       line-height: 140.62%;
     }
 
     p {
-      margin-bottom: 13%;
+      margin-bottom: 27px;
     }
 
-    p:last-of-type {
-      margin-bottom: 10.5%;
+    p:nth-last-of-type(2) {
+      margin-bottom: 35px;
     }
 
     &::before {

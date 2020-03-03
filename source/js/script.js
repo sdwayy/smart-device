@@ -1,15 +1,10 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
+var aboutCompany = document.querySelector('.about-company');
+var aboutCompanyHiddenParts = aboutCompany.getElementsByTagName('span');
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+if (window.matchMedia('(max-width: 768px)').matches) {
+  for (var i = 0; i < aboutCompanyHiddenParts.length; i++) {
+    aboutCompanyHiddenParts[i].textContent = '..';
   }
-});
+}
