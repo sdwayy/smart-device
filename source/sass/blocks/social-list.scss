@@ -1,0 +1,36 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  min-width: 40%;
+  margin-top: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-list__item {
+  margin-right: 5%;
+
+ &:last-of-type {
+   margin-right: 0;
+ }
+}
+
+@media (max-width: $desktop-width) {
+  .social-list {
+    justify-content: flex-start;
+    min-width: 110px;
+    padding-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .social-list__item {
+    margin-right: 13%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .social-list {
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+}
