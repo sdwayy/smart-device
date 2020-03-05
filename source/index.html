@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -18,6 +21,7 @@
     <div class="page-header__container container">
       <div class="page-header__top">
         <a class="page-header__logo page-header__logo--desktop">
+          <!-- 1x:203px 2x:406px -->
           <img src="/img/logo-header-desktop.png" alt="Логотип компании" width="205" height="55"
             srcset="/img/logo-header-desktop@2x.png 2x">
         </a>
@@ -56,13 +60,14 @@
           <a href="#consultation" class="company-description__btn company-description__btn--desktop btn btn--color">
             Получить бесплатную консультацию
           </a>
-          <a hre class="company-description__btn company-description__btn--mobile btn btn--color">
+          <a href="#" class="company-description__btn company-description__btn--mobile btn btn--color">
             Бесплатная консультация
           </a>
         </div>
         <div class="company-description__production-img">
           <picture>
             <source type="image/webp" srcset="img/circuit-desktop.webp 1x, img/circuit-desktop@2x.webp 2x">
+            <!-- 1x:705px 2x:1410px -->
             <img class="company-description__circuit-img" src="/img/circuit-desktop.png" alt="Печатная плата"
               width="705" height="515" srcset="img/circuit-desktop@2x.png 2x">
           </picture>
@@ -192,6 +197,7 @@
           <a class="page-footer__logo">
             <picture>
               <source type="image/webp" srcset="img/logo-footer-desktop.webp 1x, img/logo-footer-desktop@2x.webp 2x">
+              <!-- 1x:217px 2x:434px -->
               <img src="/img/logo-footer-desktop.png" alt="Логотип компании" width="216" height="51"
                 srcset="/img/logo-footer-desktop@2x.png 2x">
             </picture>
