@@ -9,7 +9,7 @@
     margin: 0;
   }
 
-  *:not(h3) {
+  *:not(h3):not(button) {
     opacity: 0.5;
   }
 }
@@ -21,25 +21,26 @@
 
 @media (max-width: $tablet-width) {
   .address {
-    padding-top: 9%;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 26px;
 
-    *:not(h3) {
-      opacity: 0.5;
-    }
-
-    h3,
-    p,
-    a {
-      margin-left: 4%;
-      margin-right: 4%;
+    button {
+      position: absolute;
+      right: 17px;
+      top: 25px;
     }
 
     h3 {
-      margin-bottom: 10%;
+      margin-bottom: 0;
     }
 
     p {
       max-width: 80%;
     }
+  }
+
+  .address__container {
+    padding-top: 30px;
   }
 }

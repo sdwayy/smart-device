@@ -16,8 +16,8 @@
   margin-right: 13.5%;
   margin-bottom: 3%;
 
-  &:last-of-type {
-    margin-right: 7%;
+  &--phone {
+    margin-right: 7.4%;
   }
 }
 
@@ -40,6 +40,7 @@
 
   .contacts__link {
     margin-right: 35%;
+
     span {
       @include visually-hidden;
     }

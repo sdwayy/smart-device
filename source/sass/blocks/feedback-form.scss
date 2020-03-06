@@ -1,0 +1,111 @@
+.feedback-form {
+  width: 25.5%;
+  padding: 1.5% 2.1% 2.1% 2.1%;
+  background-color: $main-color;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: $second-font;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 32px;
+    padding-right: 1.5%;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  input,
+  textarea {
+    padding-left: 20px;
+    width: 100%;
+    border: none;
+    color: $second-color;
+    background-color: #19baff;
+
+    &:hover {
+      background-color: $second-color;
+      color: $main-color;
+      transition: $transition-time;
+    }
+
+    &:focus {
+      outline: 2px solid darken(#19baff, 20%);
+      color: $main-color;
+      background-color: $second-color;
+      transition: $transition-time;
+    }
+  }
+
+  input:hover::placeholder,
+  textarea:hover::placeholder {
+    color: $main-color;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    height: 51.83px;
+    margin-bottom: 30px;
+  }
+
+  textarea {
+    padding-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: flex;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  input[type="checkbox"] + div {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 33px;
+    border: 1px solid $second-color;
+  }
+
+  input[type="checkbox"] {
+    @include visually-hidden;
+  }
+
+  input[type="checkbox"]:checked + div {
+    background-image: url("/img/checkbox-active.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 8px 6px;
+  }
+}
+
+.feedback-form__agree-and-send-row {
+  display: flex;
+  flex-direction: column-reverse;
+
+  span {
+    display: block;
+    padding-right: 30px;
+  }
+
+  button {
+    margin-bottom: 35px;
+  }
+}
+
+.feedback-form__close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}

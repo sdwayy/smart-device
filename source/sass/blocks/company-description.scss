@@ -20,10 +20,6 @@
   text-transform: uppercase;
 }
 
-.company-description__production-img {
-  height: 100%;
-}
-
 .company-description__description {
   position: relative;
   margin: 0;
@@ -175,6 +171,7 @@
   .company-description__btn {
     width: 100%;
     margin-left: 3.5%;
+    margin-bottom: 5%;
 
     &--desktop {
       display: none;

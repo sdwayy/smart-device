@@ -7,7 +7,7 @@
     letter-spacing: 0.03em;
   }
 
-  *:not(h3) {
+  *:not(h3):not(button) {
     opacity: 0.5;
   }
 }
@@ -26,7 +26,13 @@
 
 @media (max-width: $desktop-width) {
   .site-nav {
-    width: 51%;
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    a {
+      letter-spacing: normal;
+    }
   }
 
   .site-nav__links-container {
@@ -41,16 +47,25 @@
 
 @media (max-width: $tablet-width) {
   .site-nav {
-    width: 100%;
-    padding-bottom: 13px;
+    position: relative;
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-bottom: 26px;
     border-bottom: 1px solid #dcdddc;
 
+    button {
+      position: absolute;
+      right: 17px;
+      top: 25px;
+    }
+
     h3 {
-      margin: 0 4% 4% 4%;
+      margin: 0;
     }
   }
 
   .site-nav__links-container {
-    margin: 0 4%
+    margin: 0;
+    padding-top: 30px;
   }
 }

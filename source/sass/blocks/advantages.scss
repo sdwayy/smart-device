@@ -102,6 +102,9 @@
 
 @media (max-width: $tablet-width) {
   .advantages {
+    padding-top: 13%;
+    padding-bottom: 7%;
+
     .advantages__item {
       margin-bottom: 7%;
 
@@ -109,11 +112,6 @@
         margin-bottom: 7%;
       }
     }
-  }
-
-  .advantages {
-    padding-top: 13%;
-    padding-bottom: 7%;
   }
 
   .advantages__item {

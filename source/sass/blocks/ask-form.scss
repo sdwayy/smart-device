@@ -53,7 +53,8 @@
     color: $main-color;
   }
 
-  input[type=text] {
+  input[type="text"],
+  input[type="tel"] {
     min-width: 47.2%;
     margin-bottom: 7%;
   }
@@ -84,7 +85,7 @@
     background-position: right 31%, left 1%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image:  url("/img/paper-airplane-desktop@2x.png"), url("/img/triangle-form-desktop@2x.jpg");
+      background-image: url("/img/paper-airplane-desktop@2x.png"), url("/img/triangle-form-desktop@2x.jpg");
     }
   }
 }
@@ -97,6 +98,9 @@
 }
 
 .ask-form__agree-and-send-row {
+  display: flex;
+  flex-direction: row-reverse;
+
   label {
     display: flex;
     max-width: 47.2%;
@@ -105,9 +109,14 @@
     font-size: 14px;
     line-height: 16px;
     cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
-  input[type=checkbox] + div {
+  input[type="checkbox"] + div {
     flex-shrink: 0;
     width: 16px;
     height: 16px;
@@ -115,11 +124,11 @@
     border: 1px solid $second-color;
   }
 
-  input[type=checkbox] {
+  input[type="checkbox"] {
     @include visually-hidden;
   }
 
-   input[type=checkbox]:checked + div {
+  input[type="checkbox"]:checked + div {
     background-image: url("/img/checkbox-active.svg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -144,7 +153,7 @@
     padding-left: 8.5%;
     padding-bottom: 8.3%;
 
-    &::before{
+    &::before {
       display: none;
     }
   }
@@ -160,7 +169,8 @@
       margin-bottom: 8.8%;
     }
 
-    input[type=text] {
+    input[type="text"],
+    input[type="tel"] {
       margin-bottom: 7.7%;
     }
 
@@ -171,7 +181,7 @@
     input,
     textarea {
       &:hover {
-        background-color: #19BAFF;
+        background-color: #19baff;
         color: $second-color;
       }
     }
@@ -197,7 +207,8 @@
       font-size: 28px;
     }
 
-    input[type=text] {
+    input[type="text"],
+    input[type="tel"] {
       margin-bottom: 13%;
     }
 
@@ -208,6 +219,10 @@
   }
 
   .ask-form__agree-and-send-row {
+    button {
+      margin-bottom: 9.2%;
+    }
+
     label {
       max-width: 100%;
     }
