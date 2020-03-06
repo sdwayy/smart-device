@@ -61,6 +61,11 @@
     color: $main-color;
   }
 
+  input:focus::placeholder,
+  textarea:focus::placeholder {
+    color: $main-color;
+  }
+
   input[type="text"],
   input[type="tel"] {
     min-width: 47.2%;

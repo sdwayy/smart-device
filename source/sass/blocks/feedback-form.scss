@@ -42,8 +42,19 @@
     }
   }
 
+
+  input::placeholder,
+  textarea::placeholder {
+    color: $second-color;
+  }
+
   input:hover::placeholder,
   textarea:hover::placeholder {
+    color: $main-color;
+  }
+
+  input:focus::placeholder,
+  textarea:focus::placeholder {
     color: $main-color;
   }
 
