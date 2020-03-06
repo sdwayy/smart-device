@@ -144,9 +144,7 @@
       &::before {
         opacity: 0.2;
       }
-    }
 
-    &:hover {
       &::after {
         background-color: $main-color;
         background-image: url("/img/arrow-btn-white.svg");
