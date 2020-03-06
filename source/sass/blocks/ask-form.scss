@@ -1,5 +1,13 @@
 .ask-form {
   background-color: $main-color;
+  background-image: url("/img/paper-airplane-desktop.png"), url("/img/triangle-form-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 26.5%, 33%;
+  background-position: left 25% top 41.5%, left 14% top 48%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("/img/paper-airplane-desktop@2x.png"), url("/img/triangle-form-desktop@2x.jpg");
+  }
 
   form {
     display: flex;
@@ -69,25 +77,6 @@
   padding-top: 4.7%;
   padding-left: 37.3%;
   padding-bottom: 3.7%;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 12.2%;
-    left: -5%;
-    display: block;
-    width: 48.2%;
-    height: 76%;
-    background-image: url("/img/paper-airplane-desktop.png"), url("/img/triangle-form-desktop.jpg");
-
-    background-repeat: no-repeat;
-    background-size: 75%, 93% 94%;
-    background-position: right 31%, left 1%;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/paper-airplane-desktop@2x.png"), url("/img/triangle-form-desktop@2x.jpg");
-    }
-  }
 }
 
 .ask-form__user-data-row,
@@ -152,13 +141,11 @@
     padding-right: 7.6%;
     padding-left: 8.5%;
     padding-bottom: 8.3%;
-
-    &::before {
-      display: none;
-    }
   }
 
   .ask-form {
+    background-image: none;
+
     h2 {
       margin-bottom: 2.5%;
       font-size: 32px;
