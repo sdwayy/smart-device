@@ -18,93 +18,76 @@
     font-size: 36px;
     line-height: 51px;
   }
-
-  h3 {
-    margin: 0;
-    padding-right: 45%;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  div {
-    position: relative;
-    width: 31.6%;
-    min-height: 620px;
-    margin-right: 2.5%;
-    margin-bottom: 4%;
-    z-index: 0;
-
-    &:nth-of-type(3n) {
-      margin-right: 0;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      opacity: 0.2;
-      z-index: -1;
-    }
-
-    &:hover {
-      &::before {
-        opacity: $hover-state-opacity;
-        transition: $transition-time;
-      }
-    }
-
-    &:active {
-      opacity: $active-state-opacity;
-      transition: $transition-time;
-    }
-  }
-
-  a {
-    @include link;
-
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 13% 12%;
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      display: block;
-      width: 63px;
-      height: 63px;
-      background-color: $main-color;
-      background-image: url("/img/arrow-btn-white.svg");
-      background-size: 8px;
-      background-repeat: no-repeat;
-      background-position: right 45% center;
-    }
-
-    &:hover {
-      &::after {
-        transition: $transition-time;
-        background-color: $second-color;
-        background-image: url("/img/arrow-btn-blue.svg");
-        background-size: 12px;
-      }
-    }
-
-    &:active {
-      opacity: $active-state-opacity;
-    }
-  }
 }
 
 .goods-and-services__item {
+  @include link;
+  position: relative;
+  display: block;
+  width: 31.6%;
+  min-height: 620px;
+  margin-right: 2.5%;
+  margin-bottom: 4%;
+  padding-top: 50px;
+  padding-right: 160px;
+  padding-left: 45px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  z-index: 0;
+
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 63px;
+    height: 63px;
+    background-color: $main-color;
+    background-image: url("/img/arrow-btn-white.svg");
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: right 45% center;
+  }
+
+  &:hover {
+    &::before {
+      opacity: $hover-state-opacity;
+      transition: $transition-time;
+    }
+
+    &::after {
+      transition: $transition-time;
+      background-color: $second-color;
+      background-image: url("/img/arrow-btn-blue.svg");
+      background-size: 12px;
+    }
+  }
+
+  &:active {
+    opacity: $active-state-opacity;
+    transition: $transition-time;
+  }
+
   &--manufacturing {
     &::before {
       background-image: url("/img/manufacturing-desktop.jpg");
@@ -147,33 +130,27 @@
       font-size: 32px;
       line-height: 140.62%;
     }
+  }
 
-    h3 {
-      padding-right: 72%;
-    }
+  .goods-and-services__item {
+    width: 100%;
+    min-height: 255px;
+    margin-bottom: 6.4%;
+    padding-top: 5.7%;
+    padding-right: 70%;
+    padding-left: 6.8%;
 
-    div {
-      width: 100%;
-      min-height: 255px;
-      margin-bottom: 6.4%;
-
-      &:hover {
-        &::before {
-          opacity: 0.2;
-        }
+    &:hover {
+      &::before {
+        opacity: 0.2;
       }
     }
 
-    a {
-      padding-top: 5.7%;
-      padding-left: 6.8%;
-
-      &:hover {
-        &::after {
-          background-color: $main-color;
-          background-image: url("/img/arrow-btn-white.svg");
-          background-size: 8px;
-        }
+    &:hover {
+      &::after {
+        background-color: $main-color;
+        background-image: url("/img/arrow-btn-white.svg");
+        background-size: 8px;
       }
     }
   }
@@ -190,18 +167,12 @@
       padding-left: 5%;
       font-size: 28px;
     }
+  }
 
-    h3 {
-      padding-right: 30%;
-    }
-
-    a {
-      padding-top: 7.5%;
-      padding-left: 14%;
-    }
-
-    div {
-      margin-bottom: 10.4%;
-    }
+  .goods-and-services__item {
+    margin-bottom: 10.4%;
+    padding-top: 7.5%;
+    padding-right: 30%;
+    padding-left: 14%;
   }
 }
