@@ -16,7 +16,7 @@ var feedbackForm = overlay.querySelector('.feedback-form');
 var feedbackFormUserName = feedbackForm.querySelector('input[name=user-name]');
 var feedbackFormUserPhone = feedbackForm.querySelector('input[name=user-tel]');
 var feedbackFormUserMessage = feedbackForm.querySelector('textarea');
-
+var promoBtn = document.querySelector('.promo__btn');
 
 var closeOverlay = function () {
   overlay.classList.add('visually-hidden');
@@ -84,6 +84,7 @@ if (window.matchMedia('(max-width: 1023px)').matches) {
 if (window.matchMedia('(max-width: 767px)').matches) {
   siteNavLinksContainer.classList.add('visually-hidden');
   addressContainer.classList.add('visually-hidden');
+  promoBtn.textContent = 'Бесплатная консультация';
 
   for (
     var listBtnIndex = 0;

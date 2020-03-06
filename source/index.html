@@ -14,70 +14,56 @@
 </head>
 
 <body>
-  <div style="display: none;">
-    <include src="build/img/sprite_auto.svg"></include>
-  </div>
-
   <header class="page-header">
-    <div class="page-header__container container">
-      <div class="page-header__top">
-        <a class="page-header__logo page-header__logo--desktop">
-          <!-- 1x:203px 2x:406px -->
-          <img src="/img/logo-header-desktop.png" alt="Логотип компании" width="205" height="55"
-            srcset="/img/logo-header-desktop@2x.png 2x">
-        </a>
-        <a class="page-header__logo page-header__logo--mobile">
-          <svg width="38" height="38">
-            <use xlink:href="#icon-logo"></use>
+    <div class="page-header__top container">
+      <a class="page-header__logo page-header__logo--desktop">
+        <!-- 1x:203px 2x:406px -->
+        <img src="/img/logo-header-desktop.png" alt="Логотип компании" width="205" height="55"
+          srcset="/img/logo-header-desktop@2x.png 2x">
+      </a>
+      <a class="page-header__logo page-header__logo--mobile">
+        <svg width="38" height="38">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <div class="page-header__contacts contacts">
+        <a href="mailto:info@sd.ru" class="contacts__link">
+          <svg class="contacts__link-icon contacts__link-icon--mail" width="19" height="14">
+            <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
           </svg>
+          <span>info@sd.ru</span>
         </a>
-        <div class="page-header__contacts contacts">
-          <a href="mailto:info@sd.ru" class="contacts__link">
-            <svg class="contacts__link-icon contacts__link-icon--mail" width="19" height="14">
-              <use xlink:href="#icon-mail"></use>
-            </svg>
-            <span>info@sd.ru</span>
-          </a>
-          <a href="tel:+74950005252" class="contacts__link contacts__link--phone">
-            <svg class="contacts__link-icon contacts__link-icon--phone" width="17" height="17">
-              <use xlink:href="#icon-phone"></use>
-            </svg>
-            <span>+7 (495) 000 52 52</span>
-          </a>
-          <a href="#" class="contacts__request-call-btn btn btn--transparent-second-color">
-            Заказать звонок
-          </a>
-        </div>
+        <a href="tel:+74950005252" class="contacts__link contacts__link--phone">
+          <svg class="contacts__link-icon" width="17" height="18">
+            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          <span>+7 (495) 000 52 52</span>
+        </a>
+        <a href="#" class="contacts__request-call-btn btn btn--transparent-second-color">
+          Заказать звонок
+        </a>
       </div>
-      <h1 class="visually-hidden">Smart device - умные технологии</h1>
-      <div class="page-header__company-description company-description">
-        <div class="company-description__wrapper">
-          <p class="company-description__title">
-            Печатные платы
-          </p>
-          <p class="company-description__description">
-            производство и монтаж, поставка комплектующих, блоков и модулей
-          </p>
-          <a href="#consultation-block" class="company-description__btn company-description__btn--desktop btn btn--color">
-            Получить бесплатную консультацию
-          </a>
-          <a href="#" class="company-description__btn company-description__btn--mobile btn btn--color">
-            Бесплатная консультация
-          </a>
-        </div>
-        <div class="company-description__production-img">
-          <picture>
-            <source type="image/webp" srcset="img/circuit-desktop.webp 1x, img/circuit-desktop@2x.webp 2x">
-            <!-- 1x:705px 2x:1410px -->
-            <img class="company-description__circuit-img" src="/img/circuit-desktop.png" alt="Печатная плата"
-              width="705" height="515" srcset="img/circuit-desktop@2x.png 2x">
-          </picture>
-        </div>
-      </div>
-      <a href="#advantages-block" class="page-header__scroll-btn">
-        Скролл вниз
+    </div>
+    <div class="page-header__promo promo container">
+      <h1 class="promo__title">
+        Печатные платы
+      </h1>
+      <p class="promo__description">
+        производство и монтаж, поставка комплектующих, блоков и модулей
+      </p>
+      <picture>
+        <source type="image/webp" srcset="img/circuit-desktop.webp 1x, img/circuit-desktop@2x.webp 2x">
+        <!-- 1x:705px 2x:1410px -->
+        <img class="promo__circuit-img" src="/img/circuit-desktop.png" alt="Печатная плата" width="705" height="515"
+          srcset="img/circuit-desktop@2x.png 2x">
+      </picture>
+      <a href="#consultation-block" class="promo__btn promo__btn--desktop btn btn--color">
+        Получить бесплатную консультацию
       </a>
     </div>
+    <a href="#advantages-block" class="page-header__scroll-btn">
+      Скролл вниз
+    </a>
   </header>
   <main class="page-main">
     <div class="page-main__about-us about-us">
@@ -87,7 +73,7 @@
         </h2>
         <div class="advantages__item">
           <svg class="advantages__item-icon advantages__item-icon--wath" width="29" height="35">
-            <use xlink:href="#icon-wath"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-wath"></use>
           </svg>
           <h3>Оперативные сроки</h3>
           <p>
@@ -97,7 +83,7 @@
         </div>
         <div class="advantages__item">
           <svg class="advantages__item-icon advantages__item-icon--hired" width="35" height="35">
-            <use xlink:href="#icon-hired"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
           </svg>
           <h3>Крупные поставщики</h3>
           <p>
@@ -107,7 +93,7 @@
         </div>
         <div class="advantages__item">
           <svg class="advantages__item-icon advantages__item-icon--detective" width="36" height="31">
-            <use xlink:href="#icon-detective"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
           </svg>
           <h3>Полная конфиденциальность</h3>
           <p>
@@ -116,7 +102,7 @@
         </div>
         <div class="advantages__item">
           <svg class="advantages__item-icon advantages__item-icon--tag" width="35" height="35">
-            <use xlink:href="#icon-tag"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
           </svg>
           <h3>Персонализация стоимости</h3>
           <p>
@@ -197,7 +183,7 @@
               <a href="#" class="social-list__link">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social-list__link-icon social-list__link-icon--fb" width="27" height="26">
-                  <use xlink:href="#icon-fb"></use>
+                  <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
                 </svg>
               </a>
             </li>
@@ -205,7 +191,7 @@
               <a href="#" class="social-list__link">
                 <span class="visually-hidden">Одноклассники</span>
                 <svg class="social-list__link-icon social-list__link-icon--ok" width="27" height="26">
-                  <use xlink:href="#icon-ok"></use>
+                  <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
                 </svg>
               </a>
             </li>
@@ -213,7 +199,7 @@
               <a href="#" class="social-list__link">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg class="social-list__link-icon social-list__link-icon--vk" width="27" height="26">
-                  <use xlink:href="#icon-vk"></use>
+                  <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
@@ -285,6 +271,7 @@
       </form>
     </section>
   </div>
+  <script src="/path/to/svg4everybody.js"></script>
   <script src="/js/script.js"></script>
 </body>
 
