@@ -99,25 +99,23 @@
 }
 
 .page-footer__copyright-date {
-  &--mobile {
-    display: none;
-    font-size: 13px;
-    line-height: 24px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 32%;
+  margin-right: 10.5%;
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+
+  span:first-of-type {
+    margin-right: 2%;
   }
 
-  &--desktop {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    min-width: 32%;
-    margin-right: 10.5%;
-
-    span:first-of-type {
-      margin-right: 2%;
-    }
+  &--mobile {
+    margin-right: 0;
   }
 }
 

@@ -20,13 +20,16 @@
   var feedbackFormUserPhone = feedbackForm.querySelector('input[name=user-tel]');
   var feedbackFormUserMessage = feedbackForm.querySelector('textarea');
   var promoBtn = document.querySelector('.promo__btn');
+  var pageFooter = document.querySelector('.page-footer');
+  var copyRightDate = pageFooter.querySelector('.page-footer__copyright-date');
+  var footerLogo = pageFooter.querySelector('.page-footer__logo');
 
   var getMaxMediaExpression = function (maxWidth) {
     return ('(max-width: ' + maxWidth + 'px)');
   };
 
   var tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
-  var mobiletMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
+  var mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
 
   var closeOverlay = function () {
     overlay.classList.add('visually-hidden');
@@ -80,6 +83,13 @@
   requestCallBtn.addEventListener('click', onRequestCallBtnClick);
 
   if (window.matchMedia(tabletMaxMediaExpression).matches) {
+    var copyRightCopy = copyRightDate.cloneNode(true);
+
+    copyRightDate.remove();
+    copyRightCopy.classList.add('page-footer__copyright-date--mobile');
+    copyRightCopy.children[0].classList.add('visually-hidden');
+    footerLogo.after(copyRightCopy);
+
     requestCallBtn.removeEventListener('click', onRequestCallBtnClick);
     overlay.removeEventListener('click', onOverlayClick);
 
@@ -92,7 +102,7 @@
     }
   }
 
-  if (window.matchMedia(mobiletMaxMediaExpression).matches) {
+  if (window.matchMedia(mobileMaxMediaExpression).matches) {
     siteNavLinksContainer.classList.add('visually-hidden');
     addressContainer.classList.add('visually-hidden');
     promoBtn.textContent = 'Бесплатная консультация';
