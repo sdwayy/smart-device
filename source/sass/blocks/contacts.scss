@@ -2,9 +2,10 @@
   @include list;
 
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap; 
+  min-width: 47%;
+  max-width: 50%;
+  flex-wrap: wrap;
   padding-top: 0.7%;
   line-height: 18px;
   box-sizing: content-box;
@@ -26,6 +27,7 @@
 }
 
 .contacts__request-call-btn {
+  margin-left: auto;
   margin-bottom: 2%;
   text-decoration: none;
 }
@@ -51,6 +53,16 @@
 
   .contacts__link-icon {
     margin-right: 0;
+
+    &--mail {
+      width: 25.33px;
+      height: 18.67px;
+    }
+
+    &--phone {
+      width: 22.54px;
+      height: 22.61px;
+    }
   }
 
   .contacts__request-call-btn {

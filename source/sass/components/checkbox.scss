@@ -1,0 +1,25 @@
+.checkbox {
+  stroke: $second-color;
+
+  &:hover {
+    opacity: $hover-state-opacity;
+  }
+
+  &:active {
+    opacity: $active-state-opacity;
+  }
+}
+
+input[type=checkbox]:checked + .checkbox > .checkbox__state--checked {
+  display: block;
+}
+
+.checkbox__state {
+  &--checked {
+    display: none;
+  }
+
+  &--unchecked {
+    display: block;
+  }
+}

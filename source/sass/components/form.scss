@@ -1,0 +1,118 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 5px;
+
+  * {
+    margin-bottom: 6.8%;
+  }
+
+  input[type=checkbox] {
+    @include visually-hidden;
+  }
+
+  input[type=text],
+  input[type=tel] {
+    width: 47%;
+  }
+
+  textarea {
+    width: 100%;
+    margin-bottom: 7.4%;
+  }
+
+  input[type=text],
+  input[type=tel],
+  textarea {
+    padding: 15px 15px;
+    border: none;
+    color: $main-color;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: $second-color;
+  }
+
+  input:hover,
+  textarea:hover {
+    background-color: $second-color;
+  }
+
+  input:hover::placeholder,
+  textarea:hover::placeholder {
+    color: $main-color;
+  }
+
+  label:last-of-type {
+    position: relative;
+    display: flex;
+    align-items: center;
+    order: 1;
+    width: 46%;
+    padding-left: 32px;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.8;
+  }
+
+  button[type=submit] {
+    margin-right: 1px;
+  }
+}
+
+.form__checkbox {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+@media (max-width: $desktop-width) {
+  .form {
+    * {
+      margin-bottom: 7.5%;
+    }
+
+    textarea {
+      margin-bottom: 8.4%;
+    }
+
+    button[type=submit] {
+      width: 47%;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    padding-left: 0;
+
+    input[type=text],
+    input[type=tel] {
+      width: 100%;
+    }
+
+    * {
+      margin-bottom: 11%;
+    }
+
+    textarea {
+      height: 104px;
+      margin-bottom: 11.5%;
+    }
+
+    button[type=submit] {
+      width: 100%;
+      margin-bottom: 7%;
+    }
+
+    label:last-of-type {
+      width: 100%;
+      min-height: 50px;
+      margin-bottom: 0;
+    }
+  }
+}
