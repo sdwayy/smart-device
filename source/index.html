@@ -27,18 +27,20 @@
         </svg>
       </a>
       <div class="page-header__contacts contacts">
-        <a href="mailto:info@sd.ru" class="contacts__link">
-          <svg class="contacts__link-icon contacts__link-icon--mail" width="19" height="14" viewbox="0 0 19 14">
-            <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-          </svg>
-          <span>info@sd.ru</span>
-        </a>
-        <a href="tel:+74950005252" class="contacts__link contacts__link--phone">
-          <svg class="contacts__link-icon contacts__link-icon--phone" width="17" height="18" viewbox="0 0 17 18">
-            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-          </svg>
-          <span>+7 (495) 000 52 52</span>
-        </a>
+        <div class="contacts__links">
+          <a href="mailto:info@sd.ru" class="contacts__link">
+            <svg class="contacts__link-icon contacts__link-icon--mail" width="19" height="14" viewbox="0 0 19 14">
+              <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+            </svg>
+            <span>info@sd.ru</span>
+          </a>
+          <a href="tel:+74950005252" class="contacts__link contacts__link--phone">
+            <svg class="contacts__link-icon contacts__link-icon--phone" width="17" height="18" viewbox="0 0 17 18">
+              <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+            </svg>
+            <span>+7 (495) 000 52 52</span>
+          </a>
+        </div>
         <a href="#" class="contacts__request-call-btn btn btn--transparent-second-color">
           Заказать звонок
         </a>
@@ -69,7 +71,7 @@
     <div class="page-main__about-us about-us">
       <section class="about-us__advantages advantages container container--with-padding" id="advantages-block">
         <h2 class="visually-hidden">
-          <a name="advantages">Наши преимущества</a>
+          <a id="advantages">Наши преимущества</a>
         </h2>
         <div class="advantages__item">
           <svg class="advantages__item-icon advantages__item-icon--wath" width="29" height="35">
@@ -159,8 +161,8 @@
           <label tabindex="0">
             <input type="checkbox" name="pesronal-data-consent" tabindex="-1" checked required>
             <svg class="form__checkbox checkbox" width="16" height="16">
-              <use class="checkbox__state--checked" xlink:href="img/sprite_auto.svg#icon-checkbox-checked"></use>
-              <use class="checkbox__state--unchecked" xlink:href="img/sprite_auto.svg#icon-checkbox-unchecked"></use>
+              <use class="checkbox__state checkbox__state--checked" xlink:href="img/sprite_auto.svg#icon-checkbox-checked"></use>
+              <use class="checkbox__state checkbox__state--unchecked" xlink:href="img/sprite_auto.svg#icon-checkbox-unchecked"></use>
             </svg>
             Я согласен на обработку персональных данных
           </label>
@@ -173,73 +175,67 @@
   <footer class="page-footer">
     <div class="page-footer__container">
       <div class="page-footer__top">
-        <div class="page-footer__content-wrapper">
           <a class="page-footer__logo">
-            <picture>
-              <source type="image/webp" srcset="img/logo-footer-desktop.webp 1x, img/logo-footer-desktop@2x.webp 2x">
-              <!-- 1x:217px 2x:434px -->
-              <img src="/img/logo-footer-desktop.png" alt="Логотип компании" width="216" height="51"
-                srcset="/img/logo-footer-desktop@2x.png 2x">
-            </picture>
-          </a>
-          <ul class="page-footer__social-list social-list" aria-label="Мы в социальных сетях">
-            <li class="social-list__item">
-              <a href="#" class="social-list__link">
-                <span class="visually-hidden">Facebook</span>
-                <svg class="social-list__link-icon social-list__link-icon--fb" width="27" height="26">
-                  <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a href="#" class="social-list__link">
-                <span class="visually-hidden">Одноклассники</span>
-                <svg class="social-list__link-icon social-list__link-icon--ok" width="27" height="26">
-                  <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a href="#" class="social-list__link">
-                <span class="visually-hidden">ВКонтакте</span>
-                <svg class="social-list__link-icon social-list__link-icon--vk" width="27" height="26">
-                  <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+              <picture>
+                <source type="image/webp" srcset="img/logo-footer-desktop.webp 1x, img/logo-footer-desktop@2x.webp 2x">
+                <!-- 1x:217px 2x:434px -->
+                <img src="/img/logo-footer-desktop.png" alt="Логотип компании" width="216" height="51"
+                  srcset="/img/logo-footer-desktop@2x.png 2x">
+              </picture>
+            </a>
+            <ul class="page-footer__social-list social-list">
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <span class="visually-hidden">Facebook</span>
+                  <svg class="social-list__link-icon social-list__link-icon--fb" width="27" height="26">
+                    <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <span class="visually-hidden">Одноклассники</span>
+                  <svg class="social-list__link-icon social-list__link-icon--ok" width="27" height="26">
+                    <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" class="social-list__link">
+                  <span class="visually-hidden">ВКонтакте</span>
+                  <svg class="social-list__link-icon social-list__link-icon--vk" width="27" height="26">
+                    <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
       </div>
-      <div class="page-footer__middle">
-        <div class="page-footer__content-wrapper">
-          <nav class="page-footer__site-nav site-nav">
-            <h3>Разделы сайта</h3>
-            <button type="button" class="page-footer_list-btn list-btn list-btn--no-js">
-              <span class="visually-hidden">Открыть список</span>
-            </button>
-            <div class="site-nav__links-container">
-              <a href="#">О компании</a>
-              <a href="#">Продукты</a>
-              <a href="#">Производство печатных плат</a>
-              <a href="#">Монтаж печатных плат</a>
-              <a href="#">Комплектующие</a>
-              <a href="#">Доставка</a>
-              <a href="#">Контакты</a>
-            </div>
-          </nav>
-          <address class="page-footer__address address">
-            <h3>Наш офис</h3>
-            <button type="button" class="page-footer_list-btn list-btn list-btn--no-js">
-                <span class="visually-hidden">Открыть список</span>
-            </button>
-            <div class="address__container">
-              <p>г. Мытищи, Олимпийский проспект, д.10</p>
-              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-              <a href="tel:+79250038767">+7 (925) 003-87-67</a>
-              <a href="tel:+792692608079">+7 (926) 926-080-79</a>
-            </div>
-          </address>
+      <nav class="page-footer__site-nav site-nav">
+        <h2>Разделы сайта</h2>
+        <button type="button" class="page-footer_list-btn list-btn list-btn--no-js">
+          <span class="visually-hidden">Открыть список</span>
+        </button>
+        <div class="site-nav__links-container">
+          <a href="#">О компании</a>
+          <a href="#">Продукты</a>
+          <a href="#">Производство печатных плат</a>
+          <a href="#">Монтаж печатных плат</a>
+          <a href="#">Комплектующие</a>
+          <a href="#">Доставка</a>
+          <a href="#">Контакты</a>
         </div>
+      </nav>
+      <div class="page-footer__address address">
+        <h2>Наш офис</h2>
+        <button type="button" class="page-footer_list-btn list-btn list-btn--no-js">
+          <span class="visually-hidden">Открыть список</span>
+        </button>
+        <address class="address__container">
+          <p>г. Мытищи, Олимпийский проспект, д.10</p>
+          <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+          <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+          <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+        </address>
       </div>
     </div>
     <div class="page-footer__bottom container">
@@ -270,8 +266,8 @@
         <label tabindex="0">
           <input type="checkbox" name="pesronal-data-consent" tabindex="-1"  required checked>
             <svg class="form__checkbox checkbox" width="16" height="16">
-              <use class="checkbox__state--checked" xlink:href="img/sprite_auto.svg#icon-checkbox-checked"></use>
-              <use class="checkbox__state--unchecked" xlink:href="img/sprite_auto.svg#icon-checkbox-unchecked"></use>
+              <use class="checkbox__state checkbox__state--checked" xlink:href="img/sprite_auto.svg#icon-checkbox-checked"></use>
+              <use class="checkbox__state checkbox__state--unchecked" xlink:href="img/sprite_auto.svg#icon-checkbox-unchecked"></use>
             </svg>
             Я согласен на обработку персональных данных
         </label>

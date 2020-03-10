@@ -17,7 +17,7 @@
   var closeOverlayBtn = overlay.querySelector('.close-btn');
   var feedbackForm = overlay.querySelector('.feedback-form');
   var feedbackFormUserName = feedbackForm.querySelector('input[name=user-name]');
-  var feedbackFormUserPhone = feedbackForm.querySelector('input[name=user-tel]');
+  var feedbackFormUserPhone = feedbackForm.querySelector('input[name=user-phone]');
   var feedbackFormUserMessage = feedbackForm.querySelector('textarea');
   var promoBtn = document.querySelector('.promo__btn');
   var pageFooter = document.querySelector('.page-footer');
@@ -28,6 +28,14 @@
     return ('(max-width: ' + maxWidth + 'px)');
   };
 
+  var saveInStorage = function (name, value) {
+    if (value) {
+      localStorage.setItem('name', value);
+      return true;
+    }
+    return false;
+  };
+
   var tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
   var mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
 
@@ -35,9 +43,9 @@
     overlay.classList.add('visually-hidden');
     closeOverlayBtn.removeEventListener('click', closeOverlayBtnClick);
     document.removeEventListener('keydown', onEscPress);
-    localStorage.setItem('user-name', feedbackFormUserName.value);
-    localStorage.setItem('user-tel', feedbackFormUserPhone.value);
-    localStorage.setItem('user-message', feedbackFormUserMessage.value);
+    saveInStorage('user-name', feedbackFormUserName.value);
+    saveInStorage('user-tel', feedbackFormUserPhone.value);
+    saveInStorage('user-message', feedbackFormUserMessage.value);
   };
 
   var onEscPress = function (evt) {

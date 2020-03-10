@@ -2,23 +2,27 @@
   @include list;
 
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   min-width: 47%;
   max-width: 50%;
-  flex-wrap: wrap;
   padding-top: 0.7%;
   line-height: 18px;
-  box-sizing: content-box;
+}
+
+.contacts__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-right: 5%;
 }
 
 .contacts__link {
   @include link;
-  margin-right: 13.5%;
   margin-bottom: 3%;
-
-  &--phone {
-    margin-right: 7.4%;
-  }
+  margin-right: 3%;
+  flex-shrink: 0;
 }
 
 .contacts__link-icon {
@@ -27,7 +31,8 @@
 }
 
 .contacts__request-call-btn {
-  margin-left: auto;
+  align-self: baseline;
+  flex-shrink: 0;
   margin-bottom: 2%;
   text-decoration: none;
 }

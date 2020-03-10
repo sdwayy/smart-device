@@ -1,11 +1,12 @@
 .page-footer {
   font-size: 15px;
   line-height: 25px;
-  color: #1b2d37;
+  color: rgba(27, 45, 55, 0.5);
   background-color: #fafafa;
 
-  h3 {
-    margin: 0;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 26px;
     font-family: $second-font;
     font-weight: normal;
     font-style: normal;
@@ -13,14 +14,15 @@
     line-height: 16px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    color: rgba(27, 45, 55, 1);
   }
 
   a {
     @include link;
-    color: #1b2d37;
+    color: rgba(27, 45, 55, 0.5);
 
     &:hover {
-      opacity: 1;
+      opacity: $hover-state-opacity;
       color: $main-color;
     }
 
@@ -32,12 +34,13 @@
 
 .page-footer__container {
   display: flex;
-  border-bottom: 1px solid #dcdddc;
-}
-
-.page-footer__content-wrapper {
-  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding-top: 65px;
+  padding-left: 13%;
+  padding-right: 13.2%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dcdddc;
 }
 
 .page-footer__top {
@@ -46,23 +49,7 @@
   flex-wrap: wrap;
   flex-shrink: 0;
   width: 216px;
-  margin-left: 13%;
-  margin-right: 11%;
-  padding-top: 65px;
-  padding-bottom: 40px;
-}
-
-.page-footer__middle {
-  flex-grow: 1;
-  margin-right: 13.1%;
-  padding-top: 65px;
-  padding-bottom: 40px;
-
-  & .content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  margin-right: 3.1%;
 }
 
 .page-footer__bottom {
@@ -78,20 +65,16 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-
-  * {
-    opacity: 0.5;
-  }
 }
 
 .page-footer__site-nav {
-  min-width: 50%;
-  margin-right: 16%;
-  flex-grow: 1;
+  min-width: 450px;
+  margin-right: 3%;
+  margin-bottom: 20px;
 }
 
 .page-footer__address {
-  flex-grow: 1;
+  margin-bottom: 20px;
 }
 
 .page-footer__logo {
@@ -108,7 +91,6 @@
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  opacity: 0.5;
 
   span:first-of-type {
     margin-right: 2%;
@@ -124,38 +106,31 @@
 }
 
 @media (max-width: $desktop-width) {
-  .page-footer__top,
-  .page-footer__middle {
-    width: 100%;
-    margin: 0;
+  .page-footer__container {
+    padding: 0;
+    padding-bottom: 18px;
     border-bottom: 1px solid #dcdddc;
-  }
-
-  .page-footer__middle,
-  .page-footer__bottom {
-    a:hover {
-      color: #1b2d37;
-      opacity: 0.5;
-    }
   }
 
   .page-footer__site-nav {
     min-width: unset;
+    margin-left: 3%;
+    padding-top: 37px;
   }
 
-  .page-footer__container {
-    flex-direction: column;
-    border: none;
+  .page-footer__address {
+    min-width: 47.5%;
+    padding-top: 37px;
   }
 
   .page-footer__top {
+    width: 100%;
+    padding: 0 3%;
+    flex-direction: row;
+    justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 16px;
-
-    & .page-footer__content-wrapper {
-      margin: 0 3%;
-      justify-content: space-between;
-    }
+    border-bottom: 1px solid #dcdddc;
   }
 
   .page-footer__copyright-date {
@@ -167,15 +142,6 @@
 
     &--desktop {
       display: none;
-    }
-  }
-
-  .page-footer__middle {
-    padding-top: 37px;
-    padding-bottom: 36px;
-
-    & .page-footer__content-wrapper {
-      margin: 0 3.2%;
     }
   }
 
@@ -193,10 +159,19 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+  .page-footer__dev-by {
+    padding-right: 5px;
+  }
 }
 
 @media (max-width: $tablet-width) {
+  .page-footer__container {
+    padding-bottom: 0;
+  }
+
   .page-footer__top {
+    justify-content: center;
     padding-top: 45px;
     padding-bottom: 47px;
 
@@ -204,16 +179,17 @@
       width: 100%;
       text-align: center;
     }
-
-    & .page-footer__content-wrapper {
-      justify-content: center;
-    }
   }
 
-  .page-footer__site-nav,
-  .page-footer__address {
+  .page-footer__site-nav {
+    width: 100%;
     margin: 0;
-    padding: 0 4%;
+  }
+
+  .page-footer__address {
+    width: 100%;
+    margin: 0;
+    padding-left: 12px;
   }
 
   .page-footer__logo {
@@ -227,19 +203,8 @@
     }
   }
 
-  .page-footer__middle {
-    padding-top: 0;
-    padding-bottom: 0;
-
-    & .page-footer__content-wrapper {
-      flex-direction: column;
-      margin: 0;
-    }
-  }
-
   .page-footer__bottom {
     flex-direction: column;
-    margin: 0;
     padding-top: 27px;
     padding-bottom: 27px;
     text-align: center;
