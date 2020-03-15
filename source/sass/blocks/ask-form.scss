@@ -1,17 +1,17 @@
 .ask-form {
   background-color: $main-color;
-  background-image: url("/img/paper-airplane-desktop.png"), url("/img/triangle-form-desktop.jpg");
+  background-image: url("/img/ask-form-triangles.jpg");
   background-repeat: no-repeat;
-  background-size: 26.5%, 33%;
-  background-position: left 25% top 41.5%, left 14% top 48%;
+  background-position: right top 90px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("/img/paper-airplane-desktop@2x.png"), url("/img/triangle-form-desktop@2x.jpg");
+    background-image: url("/img/ask-form-triangles@2x.jpg");
+    background-size: 278px 524px;
   }
 
   h2 {
     margin-top: 0;
-    margin-bottom: 1.5%;
+    margin-bottom: 9px;
     font-family: $second-font;
     font-weight: normal;
     font-size: 36px;
@@ -20,23 +20,53 @@
 
   p {
     margin-top: 0;
-    margin-bottom: 9.1%;
-    padding-left: 0.7%;
+    margin-bottom: 50px;
+    padding-left: 5px;
+  }
+
+  label[for="ask-form__user-name"],
+  label[for="ask-form__user-phone"] {
+    width: 270px;
   }
 }
 
 .ask-form__container {
-  padding-top: 4.7%;
-  padding-left: 37.3%;
-  padding-bottom: 3.7%;
+  position: relative;
+  padding-top: 89px;
+  padding-bottom: 115px;
+  padding-left: 790px;
+  padding-right: 195px;
+  background-image: url("/img/ask-form-container-background.jpg");
+  background-repeat: no-repeat;
+  background-position: left 17px top;
+  background-size: 42.6% 670px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("/img/ask-form-container-background@2x.jpg");
+  }
+}
+
+@media (max-width: $content-width) {
+  .ask-form__container {
+    padding-left: 50.6%;
+    padding-right: 12.6%;
+  }
+
+  .ask-form {
+    label[for="ask-form__user-name"],
+    label[for="ask-form__user-phone"] {
+      width: 47.4%;
+    }
+  }
 }
 
 @media (max-width: $desktop-width) {
   .ask-form__container {
     padding-top: 10.5%;
-    padding-right: 7.6%;
-    padding-left: 8.5%;
-    padding-bottom: 7.7%;
+    padding-right: 11.5%;
+    padding-left: 11.5%;
+    padding-bottom: 13%;
+    background-image: none;
   }
 
   .ask-form {
@@ -57,15 +87,25 @@
 @media (max-width: $tablet-width) {
   .ask-form__container {
     padding-top: 9.4%;
-    padding-left: 1.8%;
-    padding-right: 1.1%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-bottom: 10%;
   }
 
   .ask-form {
     h2 {
-      margin-bottom: 5%;
+      margin-bottom: 12px;
       font-size: 28px;
+    }
+
+    p {
+      margin-bottom: 25px;
+      padding-left: 0;
+    }
+
+    label[for="ask-form__user-name"],
+    label[for="ask-form__user-phone"] {
+      width: 100%;
     }
   }
 }

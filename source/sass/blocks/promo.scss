@@ -2,33 +2,24 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 65px;
-  padding-bottom: 150px;
+  padding-top: 200px;
+  padding-bottom: 126px;
+  padding-left: $desktop-fixed-padding;
+  padding-right: $desktop-fixed-padding;
+  background-image: url("/img/circuit-desktop.png"), url("/img/promo-mask-desktop.png");
+  background-repeat: no-repeat;
+  background-position: right top 140px, right -180px top -120px;
+  background-size: 45% 515px, 1920px 881px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    right: 0;
-    display: block;
-    width: 44%;
-    height: 495px;
-
-    background-image: url("/img/triangle-header-desktop.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right top;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/triangle-header-desktop@2x.jpg");
-    }
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("/img/circuit-desktop@2x.png"), url("/img/promo-mask-desktop@2x.png");
   }
 }
 
 .promo__title {
   margin: 0;
-  margin-bottom: 27px;
-  max-width: 55%;
+  margin-bottom: 25px;
+  width: 761px;
   font-family: $second-font;
   font-weight: bold;
   font-size: 80px;
@@ -39,10 +30,10 @@
 
 .promo__description {
   position: relative;
-  max-width: 55%;
+  width: 710px;
   margin: 0;
-  margin-bottom: 40px;
-  padding-left: 6.7%;
+  margin-bottom: 39px;
+  padding-left: 95px;
   font-size: 22px;
   line-height: 34px;
   z-index: 3;
@@ -50,75 +41,77 @@
   &::before {
     content: "";
     position: absolute;
-    top: 25%;
+    top: 15px;
     left: 0;
     display: block;
-    width: 9%;
+    width: 66px;
     height: 2px;
     background-color: $second-color;
   }
 }
 
 .promo__btn {
-  position: relative;
-  margin-left: 6.7%;
+  margin-left: 93px;
+  margin-bottom: 130px;
   align-self: baseline;
   z-index: 3;
 }
 
-.promo__circuit-img {
-  position: absolute;
-  top: 0;
-  right: -5.2%;
-  display: block;
-  width: 50%;
-  z-index: 1;
+.promo__scroll-btn {
+  @include link;
+  align-self: flex-start;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+  letter-spacing: normal;
+  opacity: 0.5;
+  transform: rotate(-90deg) translateY(-40px);
+
+  &:hover {
+    opacity: 1;
+    transition: $transition-time;
+  }
 }
 
 @media (max-width: $desktop-width) {
   .promo {
-      padding-left: 9%;
+    padding-top: 110px;
+    padding-left: 12%;
+    padding-bottom: 165px;
+    background-image: url("/img/circuit-tablet.png"), url("/img/promo-mask-tablet.png");
+    background-position: right top 35px, right -2px top -78px;
+    background-size: 260px 340px, 770px 563px;
 
-      &::before {
-        content: "";
-        top: -45px;
-        right: -22px;
-        height: 390px;
-
-        background-image: url("/img/triangle-header-tablet.jpg");
-
-        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-          background-image: url("/img/triangle-header-tablet@2x.jpg");
-        }
-      }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/circuit-tablet@2x.png"), url("/img/promo-mask-tablet@2x.png");
     }
+  }
 
   .promo__title {
-      max-width: 60%;
-      margin-bottom: 4.2%;
-      font-size: 60px;
-      line-height: 70px;
-      letter-spacing: 0.07em;
-    }
+    max-width: 60%;
+    margin-bottom: 4.9%;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.07em;
+  }
 
   .promo__description {
-      max-width: 60%;
-      padding-left: 7%;
-      margin-bottom: 55px;
-      font-size: 18px;
-      line-height: 156.8%;
+    width: 70%;
+    padding-left: 7.7%;
+    margin-bottom: 57px;
+    font-size: 18px;
+    line-height: 156.8%;
 
-      &::before {
-        top: 29%;
-        left: 0;
-        width: 6%;
-        height: 3.5%;
-      }
+    &::before {
+      top: 28%;
+      width: 7.5%;
     }
+  }
 
   .promo__btn {
-      margin-left: 7%;
-    }
+    margin-left: 7.7%;
+    margin-bottom: 0;
+  }
 
   .promo__circuit-img {
     top: -2%;
@@ -126,63 +119,56 @@
     width: 65%;
     z-index: 1;
   }
+
+  .promo__scroll-btn {
+    display: none;
+  }
 }
 
 @media (max-width: $tablet-width) {
-  .promo__wrapper {
-      max-width: 95.5%;
-    }
-
   .promo {
-      padding-top: 66.7%;
-      padding-left: 0;
-      padding-bottom: 30px;
+    padding-top: 226px;
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+    padding-bottom: 57px;
 
-      &::before {
-        content: "";
-        top: -5px;
-        right: -12px;
-        height: 370px;
-
-        background-image: url("/img/triangle-header-mobile.jpg");
-        background-size: cover;
-      }
-    }
+    background-image: url("/img/circuit-mobile.png"), url("/img/promo-mask-mobile.png");
+    background-position: right top 35px, right top -60px;
+    background-size: auto;
+  }
 
   .promo__title {
-      position: relative;
-      margin-bottom: 26px;
-      padding-left: 1.5%;
-      font-size: 40px;
-      line-height: 47px;
-      letter-spacing: 0.07em;
-      z-index: 3;
-    }
+    position: relative;
+    width: 100%;
+    margin-bottom: 27px;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.07em;
+    z-index: 3;
+  }
 
   .promo__description {
-      max-width: 100%;
-      padding-left: 19%;
-      margin-bottom: 43px;
-      font-size: 16px;
+    width: 95%;
+    padding-left: 17%;
+    margin-bottom: 43px;
+    font-size: 16px;
 
-      &::before {
-        top: 20%;
-        left: 3%;
-        width: 11.5%;
-        height: 2%;
-      }
+    &::before {
+      top: 20%;
+      width: 10.5%;
     }
+  }
 
   .promo__btn {
-      width: 95%;
-      margin-left: 3.1%;
-      margin-bottom: 5%;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5%;
   }
 
   .promo__circuit-img {
-      top: 3%;
-      left: 5%;
-      width: 100%;
-      z-index: 1;
+    top: 3%;
+    left: 5%;
+    width: 100%;
+    z-index: 1;
   }
 }

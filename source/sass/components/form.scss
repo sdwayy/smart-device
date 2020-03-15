@@ -5,30 +5,34 @@
   justify-content: space-between;
   padding-left: 5px;
 
-  * {
-    margin-bottom: 6.8%;
+  label {
+    margin-bottom: 40px;
+    width: 100%;
   }
 
-  input[type=checkbox] {
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  input[type="checkbox"] {
     @include visually-hidden;
   }
 
-  input[type=text],
-  input[type=tel] {
-    width: 47%;
+  input[type="text"],
+  input[type="tel"] {
+    padding: 17px 15px;
   }
 
   textarea {
-    width: 100%;
-    margin-bottom: 7.4%;
+    padding: 12px 17px;
   }
 
-  input[type=text],
-  input[type=tel],
+  input[type="text"],
+  input[type="tel"],
   textarea {
-    padding: 15px 15px;
     border: none;
-    color: $main-color;
+    color: $second-color;
     background-color: rgba(255, 255, 255, 0.1);
   }
 
@@ -42,6 +46,11 @@
     background-color: $second-color;
   }
 
+  input:focus,
+  textarea:focus {
+    color: $main-color;
+  }
+
   input:hover::placeholder,
   textarea:hover::placeholder {
     color: $main-color;
@@ -53,14 +62,28 @@
     align-items: center;
     order: 1;
     width: 46%;
+    margin-bottom: 0;
     padding-left: 32px;
     font-size: 14px;
     line-height: 16px;
     opacity: 0.8;
+
+    &:hover {
+      opacity: $hover-state-opacity;
+      transition: $transition-time;
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+      transition: $transition-time;
+    }
   }
 
-  button[type=submit] {
+  button[type="submit"] {
     margin-right: 1px;
+    width: 47.1%;
+    min-height: 45px;
+    padding: 0;
   }
 }
 
@@ -72,16 +95,22 @@
 
 @media (max-width: $desktop-width) {
   .form {
-    * {
-      margin-bottom: 7.5%;
+    button[type="submit"] {
+      width: 47%;
+    }
+
+    label {
+      margin-bottom: 43px;
+
+      &:last-of-type {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
 
     textarea {
-      margin-bottom: 8.4%;
-    }
-
-    button[type=submit] {
-      width: 47%;
+      height: 159px;
     }
   }
 }
@@ -90,21 +119,20 @@
   .form {
     padding-left: 0;
 
-    input[type=text],
-    input[type=tel] {
-      width: 100%;
+    label {
+      margin-bottom: 30px;
     }
 
-    * {
-      margin-bottom: 11%;
+    input[type="text"],
+    input[type="tel"] {
+      width: 100%;
     }
 
     textarea {
       height: 104px;
-      margin-bottom: 11.5%;
     }
 
-    button[type=submit] {
+    button[type="submit"] {
       width: 100%;
       margin-bottom: 7%;
     }

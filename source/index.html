@@ -14,62 +14,50 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__top container">
-      <a class="page-header__logo page-header__logo--desktop">
+  <div class="header-container">
+    <header class="header-container header wrapper">
+      <a class="header__logo">
         <!-- 1x:203px 2x:406px -->
-        <img src="/img/logo-header-desktop.png" alt="Логотип компании" width="205" height="55"
-          srcset="/img/logo-header-desktop@2x.png 2x">
+        <picture>
+          <source media="(max-width: 767px)" srcset="/img/logo.svg">
+          <img src="/img/logo-header-desktop.png" alt="Логотип компании" width="205" height="55"
+            srcset="/img/logo-header-desktop@2x.png 2x">
+        </picture>
       </a>
-      <a class="page-header__logo page-header__logo--mobile">
-        <svg width="38" height="38">
-          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+      <a href="mailto:info@sd.ru" class="header__link">
+        <svg class="header__link-icon header__link-icon--mail" width="19" height="14" viewbox="0 0 19 14">
+          <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
         </svg>
+        info@sd.ru
       </a>
-      <div class="page-header__contacts contacts">
-        <div class="contacts__links">
-          <a href="mailto:info@sd.ru" class="contacts__link">
-            <svg class="contacts__link-icon contacts__link-icon--mail" width="19" height="14" viewbox="0 0 19 14">
-              <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-            </svg>
-            <span>info@sd.ru</span>
-          </a>
-          <a href="tel:+74950005252" class="contacts__link contacts__link--phone">
-            <svg class="contacts__link-icon contacts__link-icon--phone" width="17" height="18" viewbox="0 0 17 18">
-              <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-            </svg>
-            <span>+7 (495) 000 52 52</span>
-          </a>
-        </div>
-        <a href="#" class="contacts__request-call-btn btn btn--transparent-second-color">
-          Заказать звонок
-        </a>
-      </div>
-    </div>
-    <div class="page-header__promo promo container">
+      <a href="tel:+74950005252" class="header__link header__link--phone">
+        <svg class="header__link-icon header__link-icon--phone" width="17" height="18" viewbox="0 0 17 18">
+          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+        </svg>
+        +7 (495) 000 52 52
+      </a>
+      <a href="#" class="header__request-call-btn btn btn--transparent-second-color">
+        Заказать звонок
+      </a>
+    </header>
+    <div class="header-container__promo promo wrapper">
       <h1 class="promo__title">
         Печатные платы
       </h1>
       <p class="promo__description">
         производство и монтаж, поставка комплектующих, блоков и модулей
       </p>
-      <picture>
-        <source type="image/webp" srcset="img/circuit-desktop.webp 1x, img/circuit-desktop@2x.webp 2x">
-        <!-- 1x:705px 2x:1410px -->
-        <img class="promo__circuit-img" src="/img/circuit-desktop.png" alt="Печатная плата" width="705" height="515"
-          srcset="img/circuit-desktop@2x.png 2x">
-      </picture>
       <a href="#consultation-block" class="promo__btn promo__btn--desktop btn btn--color">
         Получить бесплатную консультацию
       </a>
+      <a href="#advantages-block" class="promo__scroll-btn">
+        Cкролл вниз
+      </a>
     </div>
-    <a href="#advantages-block" class="page-header__scroll-btn">
-      Скролл вниз
-    </a>
-  </header>
+  </div>
   <main class="page-main">
     <div class="page-main__about-us about-us">
-      <section class="about-us__advantages advantages container container--with-padding" id="advantages-block">
+      <section class="about-us__advantages advantages wrapper" id="advantages-block">
         <h2 class="visually-hidden">
           <a id="advantages">Наши преимущества</a>
         </h2>
@@ -113,7 +101,7 @@
           </p>
         </div>
       </section>
-      <article class="about-us__about-company about-company container container--with-padding">
+      <article class="about-us__about-company about-company wrapper">
         <h2>О компании</h2>
         <p>
           Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
@@ -129,7 +117,7 @@
       </article>
     </div>
     <section class="page-main__goods-and-services goods-and-services">
-      <div class="goods-and-services__container container container--with-padding">
+      <div class="goods-and-services__container wrapper">
         <h2>
           Service Device предлагает следующие товары и услуги
         </h2>
@@ -145,35 +133,39 @@
       </div>
     </section>
     <section class="page-main__ask-form ask-form">
-      <div class="ask-form__container container container--with-padding" id="consultation-block">
+      <div class="ask-form__container wrapper" id="consultation-block">
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
         <form class="ask-form__form form" method="POST" action="#" autocomplete="off">
-          <label for="ask-form__user-name" class="visually-hidden" aria-label="Введите ваше имя"></label>
-          <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20" id="ask-form__user-name">
-
-          <label for="ask-form__user-phone" class="visually-hidden" aria-label="Введите ваш телефон"></label>
-          <input type="tel" name="user-phone" placeholder="Телефон" required minlength="10" maxlength="18" id="ask-form__user-phone">
-
-          <label for="ask-form__user-question" class="visually-hidden" aria-label="Введите ваш вопрос"></label>
-          <textarea name="question" cols="30" rows="7" placeholder="Ваш вопрос" required minlength="10" id="ask-form__user-question"></textarea>
-
+          <label for="ask-form__user-name" aria-label="Введите ваше имя">
+            <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20"
+              id="ask-form__user-name">
+          </label>
+          <label for="ask-form__user-phone" aria-label="Введите ваш телефон">
+            <input type="tel" name="user-phone" placeholder="Телефон" required minlength="10" maxlength="18"
+              id="ask-form__user-phone">
+          </label>
+          <label for="ask-form__user-question" aria-label="Введите ваш вопрос">
+            <textarea name="question" cols="30" rows="7" placeholder="Ваш вопрос" required minlength="10"
+              id="ask-form__user-question"></textarea>
+          </label>
           <label tabindex="0">
             <input type="checkbox" name="pesronal-data-consent" tabindex="-1" checked required>
             <svg class="form__checkbox checkbox" width="16" height="16">
-              <use class="checkbox__state checkbox__state--checked" xlink:href="img/sprite_auto.svg#icon-checkbox-checked"></use>
-              <use class="checkbox__state checkbox__state--unchecked" xlink:href="img/sprite_auto.svg#icon-checkbox-unchecked"></use>
+              <use class="checkbox__state checkbox__state--checked"
+                xlink:href="img/sprite_auto.svg#icon-checkbox-checked"></use>
+              <use class="checkbox__state checkbox__state--unchecked"
+                xlink:href="img/sprite_auto.svg#icon-checkbox-unchecked"></use>
             </svg>
             Я согласен на обработку персональных данных
           </label>
-
           <button type="submit" class="btn btn--color-with-border">Задать вопрос</button>
         </form>
       </div>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__container">
+    <div class="page-footer__container wrapper">
       <div class="page-footer__top">
           <a class="page-footer__logo">
               <picture>
@@ -239,14 +231,16 @@
       </div>
     </div>
     <div class="page-footer__bottom container">
-      <p class="page-footer__copyright-date">
-        <span>Все права защищены</span>
-        <span>1999-2018 SD Service Devices</span>
-      </p>
-      <a href="#" class="page-footer__confidentiality-link">Условия конфиденциальности</a>
-      <p class="page-footer__dev-by">
-        <span>Developed by</span><a href="#"> wow studio</a>
-      </p>
+      <div class="page-footer__bottom-wrapper wrapper">
+        <p class="page-footer__copyright-date">
+          <span>Все права защищены</span>
+          <span>1999-2018 SD Service Devices</span>
+        </p>
+        <a href="#" class="page-footer__confidentiality-link">Условия конфиденциальности</a>
+        <p class="page-footer__dev-by">
+          <span>Developed by</span><a href="#"> wow studio</a>
+        </p>
+      </div>
     </div>
   </footer>
   <div class="overlay visually-hidden">
@@ -254,15 +248,15 @@
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form class="feedback-form__form form" action="#" method="POST" autocomplete="off">
-        <label for="feedback-form__user-name" class="visually-hidden" aria-label="Введите ваше имя"></label>
-        <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20" id="feedback-form__user-name">
-
-        <label for="feedback-form__user-phone" class="visually-hidden" aria-label="Введите ваш телефон"></label>
-        <input type="tel" name="user-phone" placeholder="Телефон" required minlength="10" maxlength="18" id="feedback-form__user-phone">
-
-        <label for="feedback-form__user-question" class="visually-hidden" aria-label="Введите ваш вопрос"></label>
-        <textarea name="question" cols="20" rows="5" placeholder="Ваш вопрос" required minlength="10" id="feedback-form__user-question"></textarea>
-
+        <label for="feedback-form__user-name" aria-label="Введите ваше имя">
+          <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20" id="feedback-form__user-name">
+        </label>
+        <label for="feedback-form__user-phone" aria-label="Введите ваш телефон">
+          <input type="tel" name="user-phone" placeholder="Телефон" required minlength="10" maxlength="18" id="feedback-form__user-phone">
+        </label>
+        <label for="feedback-form__user-question" aria-label="Введите ваш вопрос">
+          <textarea name="question" cols="20" rows="5" placeholder="Ваш вопрос" required minlength="10" id="feedback-form__user-question"></textarea>
+        </label>
         <label tabindex="0">
           <input type="checkbox" name="pesronal-data-consent" tabindex="-1"  required checked>
             <svg class="form__checkbox checkbox" width="16" height="16">
@@ -271,7 +265,6 @@
             </svg>
             Я согласен на обработку персональных данных
         </label>
-
         <button type="submit" class="btn btn--color-with-border">Задать вопрос</button>
         <button class="feedback-form__close-btn close-btn" type="reset" aria-label="Закрыть окно">
           <svg width="20" height="20">

@@ -5,15 +5,16 @@
 .goods-and-services__container {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 4.5%;
-  padding-bottom: 4.3%;
+  padding-top: 86px;
+  padding-bottom: 82px;
+  padding-left: $desktop-flatten-padding;
+  padding-right: $desktop-flatten-padding;
   font-family: $second-font;
   color: $second-color;
 
   h2 {
-    width: 100%;
     margin-top: 0;
-    margin-bottom: 4.5%;
+    margin-bottom: 53px;
     font-weight: normal;
     font-size: 36px;
     line-height: 51px;
@@ -24,13 +25,14 @@
   @include link;
   position: relative;
   display: block;
-  width: 31.6%;
+  width: 372px;
   min-height: 620px;
-  margin-right: 2.5%;
-  margin-bottom: 4%;
+  margin-right: 30px;
+  margin-bottom: 47px;
   padding-top: 50px;
-  padding-right: 160px;
-  padding-left: 45px;
+  padding-bottom: 50px;
+  padding-right: 152px;
+  padding-left: 47px;
   font-weight: normal;
   font-size: 20px;
   line-height: 30px;
@@ -119,11 +121,24 @@
   }
 }
 
+@media (max-width: $content-width) {
+  .goods-and-services__item {
+    width: 31.6%;
+    margin-right: 2.6%;
+    padding-top: 2.6%;
+    padding-bottom: 4.3%;
+    padding-right: 13.3%;
+    padding-left: 4.1%;
+  }
+}
+
 @media (max-width: $desktop-width) {
   .goods-and-services__container {
     flex-direction: column;
-    padding-top: 6.2%;
+    padding-top: 6.4%;
     padding-bottom: 4.7%;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
 
     h2 {
       margin-bottom: 7.1%;
@@ -138,8 +153,9 @@
     min-height: 255px;
     margin-bottom: 6.4%;
     padding-top: 5.7%;
+    padding-bottom: 5.7%;
     padding-right: 70%;
-    padding-left: 6.8%;
+    padding-left: 6%;
 
     &:hover {
       &::before {
@@ -171,6 +187,7 @@
   .goods-and-services__item {
     margin-bottom: 10.4%;
     padding-top: 7.5%;
+    padding-bottom: 7.5%;
     padding-right: 30%;
     padding-left: 14%;
   }

@@ -12,7 +12,7 @@
   var address = document.querySelector('.address');
   var addressContainer = address.querySelector('.address__container');
   var listBtns = document.querySelectorAll('.page-footer_list-btn');
-  var requestCallBtn = document.querySelector('.contacts__request-call-btn');
+  var requestCallBtn = document.querySelector('.header__request-call-btn');
   var overlay = document.querySelector('.overlay');
   var closeOverlayBtn = overlay.querySelector('.close-btn');
   var feedbackForm = overlay.querySelector('.feedback-form');
@@ -23,6 +23,7 @@
   var pageFooter = document.querySelector('.page-footer');
   var copyRightDate = pageFooter.querySelector('.page-footer__copyright-date');
   var footerLogo = pageFooter.querySelector('.page-footer__logo');
+  var body = document.querySelector('body');
 
   var getMaxMediaExpression = function (maxWidth) {
     return ('(max-width: ' + maxWidth + 'px)');
@@ -46,6 +47,7 @@
     saveInStorage('user-name', feedbackFormUserName.value);
     saveInStorage('user-tel', feedbackFormUserPhone.value);
     saveInStorage('user-message', feedbackFormUserMessage.value);
+    body.style.overflow = 'visible';
   };
 
   var onEscPress = function (evt) {
@@ -60,6 +62,7 @@
     feedbackFormUserName.focus();
     closeOverlayBtn.addEventListener('click', closeOverlayBtnClick);
     overlay.addEventListener('click', onOverlayClick);
+    body.style.overflow = 'hidden';
   };
 
   var onOverlayClick = function (evt) {

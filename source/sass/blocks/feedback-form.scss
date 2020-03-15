@@ -23,8 +23,8 @@
 }
 
 .feedback-form__form {
-  input[type=text],
-  input[type=tel],
+  input[type="text"],
+  input[type="tel"],
   textarea {
     width: 100%;
   }
@@ -36,11 +36,12 @@
     order: 1;
   }
 
-  button[type=submit] {
+  button[type="submit"] {
     width: 100%;
+    margin-bottom: 30px;
   }
 
-  button[type=reset] {
+  button[type="reset"] {
     width: 17px;
     height: 17px;
     border: none;

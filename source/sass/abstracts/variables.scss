@@ -1,3 +1,5 @@
+$content-width: 1560px;
+
 $mobile-width: 320px;
 $tablet-width: 767px;
 $desktop-width: 1023px;
@@ -5,8 +7,10 @@ $desktop-width: 1023px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-$tablet-padding: 0;
-$desktop-padding: 6.3%;
+$desktop-fixed-padding: 75px;
+$desktop-flatten-padding: 192px;
+$tablet-padding: 3.3%;
+$mobile-padding: 5.2%;
 
 $main-font: "PT Mono", "Arial", sans-serif;
 $second-font: "Roboto Condensed", "Arial", sans-serif;

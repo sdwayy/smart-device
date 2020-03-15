@@ -10,6 +10,14 @@
   font-style: normal;
 }
 
+@media (max-width: $desktop-width) {
+  .address {
+    h2 {
+      padding-left: 4px;
+    }
+  }
+}
+
 @media (max-width: $tablet-width) {
   .address {
     position: relative;

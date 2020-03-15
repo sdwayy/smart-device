@@ -1,15 +1,22 @@
 .about-company {
   position: relative;
-  padding-top: 1%;
-  padding-right: 7.2%;
-  padding-bottom: 6%;
-  padding-left: 300px;
+  padding-top: 25px;
+  padding-right: $desktop-flatten-padding + 5px;
+  padding-bottom: 110px;
+  padding-left: 375px;
   color: $description-font-color;
-  z-index: 1;
+  background-image: url("/img/date-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: left 12% top 25px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("/img/date-desktop@2x.jpg");
+    background-size: 220px 317px;
+  }
 
   h2 {
     margin-top: 0;
-    margin-bottom: 2%;
+    margin-bottom: 20px;
     font-family: $second-font;
     font-weight: normal;
     font-size: 36px;
@@ -18,38 +25,27 @@
 
   p {
     margin-top: 0;
-    margin-bottom: 2.2%;
+    margin-bottom: 22px;
   }
 
-  p:last-of-type{
-    margin-bottom: 4%;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: 6.5%;
-    display: block;
-    width: 317px;
-    height: 320px;
-    background-image: url("/img/date-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/date-desktop@2x.jpg");
-    }
+  p:last-of-type {
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: $desktop-width) {
   .about-company {
-    padding-top: 3.5%;
-    padding-right: 0.5%;
-    padding-bottom: 10.3%;
-    padding-left: 190px;
+    padding-top: 2.2%;
+    padding-right: 3%;
+    padding-bottom: 10.6%;
+    padding-left: 210px;
+    background-image: url("/img/date-tablet.jpg");
+    background-size: 240px 362px;
+    background-position: left top 18px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/date-tablet@2x.jpg");
+    }
 
     h2 {
       margin-bottom: 4.8%;
@@ -64,27 +60,15 @@
     p:last-of-type {
       margin-bottom: 8%;
     }
-
-    &::before {
-      content: "";
-      top: 27px;
-      left: -2.5%;
-      width: 362px;
-      height: 352px;
-      background-image: url("/img/date-tablet.jpg");
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("/img/date-tablet@2x.jpg");
-      }
-    }
   }
 }
 
 @media (max-width: $tablet-width) {
   .about-company {
-    padding-top: 10%;
-    padding-left: 2%;
-    padding-bottom: 22.5%;
+    padding-top: 4.4%;
+    padding-left: 5%;
+    padding-bottom: 20%;
+    background-image: none;
 
     h2 {
       margin-bottom: 20px;
@@ -93,7 +77,7 @@
     }
 
     p {
-      margin-bottom: 45px;
+      margin-bottom: 42px;
     }
 
     p:last-of-type {
