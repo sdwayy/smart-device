@@ -73,6 +73,13 @@
   }
 }
 
+@media (max-width: $content-width) {
+  .promo {
+    padding-left: $desktop-percent-padding;
+    padding-right: $desktop-percent-padding;
+  }
+}
+
 @media (max-width: $desktop-width) {
   .promo {
     padding-top: 110px;

@@ -122,6 +122,11 @@
 }
 
 @media (max-width: $content-width) {
+  .goods-and-services__container {
+    padding-left: $desktop-percent-flatten-padding;
+    padding-right: $desktop-percent-flatten-padding;
+  }
+
   .goods-and-services__item {
     width: 31.6%;
     margin-right: 2.6%;

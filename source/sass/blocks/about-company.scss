@@ -7,11 +7,11 @@
   color: $description-font-color;
   background-image: url("/img/date-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: left 12% top 25px;
+  background-position: left 12% top 30px;
+  background-size: 14.5% 72%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("/img/date-desktop@2x.jpg");
-    background-size: 220px 317px;
   }
 
   h2 {
@@ -30,6 +30,13 @@
 
   p:last-of-type {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: $content-width) {
+  .about-company {
+    padding-left: 24%;
+    padding-right: 12.6%;
   }
 }
 

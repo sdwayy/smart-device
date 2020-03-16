@@ -63,6 +63,7 @@
 
 .page-footer__bottom-wrapper {
   display: flex;
+  justify-content: space-between;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: $desktop-fixed-padding;
@@ -76,30 +77,26 @@
 .page-footer__copyright-date {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   min-width: 32%;
-  margin-right: 10.5%;
   font-size: 13px;
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-
-  span:first-of-type {
-    margin-right: 2%;
-  }
-
-  &--mobile {
-    margin-right: 0;
-  }
-}
-
-.page-footer__dev-by {
-  margin-left: auto;
 }
 
 @media (max-width: $content-width) {
+  .page-footer__container {
+    padding-left: $desktop-percent-padding;
+    padding-right: $desktop-percent-padding;
+  }
+
   .page-footer__site-nav {
     width: 40%;
+  }
+
+  .page-footer__bottom-wrapper {
+    padding-left: $desktop-percent-padding;
+    padding-right: $desktop-percent-padding;
   }
 }
 

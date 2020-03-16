@@ -64,6 +64,11 @@
 }
 
 @media (max-width: $content-width) {
+  .advantages {
+    padding-left: $desktop-percent-flatten-padding;
+    padding-right: $desktop-percent-flatten-padding;
+  }
+
   .advantages__item {
     width: 48.5%;
     padding-top: 3.4%;
