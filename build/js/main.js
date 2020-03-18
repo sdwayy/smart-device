@@ -24,6 +24,35 @@
   var copyRightDate = pageFooter.querySelector('.page-footer__copyright-date');
   var footerLogo = pageFooter.querySelector('.page-footer__logo');
   var body = document.querySelector('body');
+  var advantagesBlockAnchor = document.querySelector('.promo__scroll-btn');
+  var phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+  var onPhineInputsFocus = function (evt) {
+    var inputValue = evt.currentTarget.value;
+
+    if (!inputValue) {
+      evt.currentTarget.value = '+7(';
+    }
+  };
+
+  var addSmoothScrollFromAnchorToBlock = function (anchor) {
+    var blockId = anchor.getAttribute('href').substr(1);
+
+    document.getElementById(blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
+  var onConsultationAnchorClick = function (evt) {
+    evt.preventDefault();
+    addSmoothScrollFromAnchorToBlock(promoBtn);
+  };
+
+  var onAdvantagesBlockAnchorClick = function (evt) {
+    evt.preventDefault();
+    addSmoothScrollFromAnchorToBlock(advantagesBlockAnchor);
+  };
 
   var getMaxMediaExpression = function (maxWidth) {
     return ('(max-width: ' + maxWidth + 'px)');
@@ -31,7 +60,7 @@
 
   var saveInStorage = function (name, value) {
     if (value) {
-      localStorage.setItem('name', value);
+      localStorage.setItem(name, value);
       return true;
     }
     return false;
@@ -91,6 +120,18 @@
   };
 
   requestCallBtn.addEventListener('click', onRequestCallBtnClick);
+  promoBtn.addEventListener('click', onConsultationAnchorClick);
+  advantagesBlockAnchor.addEventListener('click', onAdvantagesBlockAnchorClick);
+
+  for (var phoneInputIndex = 0; phoneInputIndex < phoneInputs.length; phoneInputIndex++) {
+    var currentInput = phoneInputs[phoneInputIndex];
+
+    $(currentInput).mask('+7(999)999-9999');
+
+    currentInput.addEventListener('focus', function (evt) {
+      onPhineInputsFocus(evt);
+    });
+  }
 
   if (window.matchMedia(tabletMaxMediaExpression).matches) {
     var copyRightCopy = copyRightDate.cloneNode(true);

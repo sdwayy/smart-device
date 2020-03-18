@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года."/>
   <title>Smart Device</title>
+  <link rel="preload" href="./fonts/PTMono-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
@@ -19,7 +22,7 @@
       <a class="header__logo">
         <!-- 1x:203px 2x:406px -->
         <picture>
-          <source media="(max-width: 767px)" srcset="/img/logo.svg">
+          <source media="(max-width: 767px)" srcset="img/logo.svg">
           <img src="img/logo-header-desktop.png" alt="Логотип компании" width="205" height="55"
             srcset="img/logo-header-desktop@2x.png 2x">
         </picture>
@@ -141,7 +144,7 @@
             <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20" id="ask-form__user-name">
           </label>
           <label for="ask-form__user-phone" aria-label="Введите ваш телефон">
-            <input type="tel" name="user-phone" placeholder="Телефон" required minlength="10" maxlength="18"
+            <input type="tel" name="user-phone" placeholder="Телефон" required minlength="9" maxlength="14"
               id="ask-form__user-phone">
           </label>
           <label for="ask-form__user-question" aria-label="Введите ваш вопрос">
@@ -251,7 +254,7 @@
           <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20" id="feedback-form__user-name">
         </label>
         <label for="feedback-form__user-phone" aria-label="Введите ваш телефон">
-          <input type="tel" name="user-phone" placeholder="Телефон" required minlength="10" maxlength="18" id="feedback-form__user-phone">
+          <input type="tel" name="user-phone" placeholder="Телефон" required minlength="9" maxlength="14" id="feedback-form__user-phone">
         </label>
         <label for="feedback-form__user-question" aria-label="Введите ваш вопрос">
           <textarea name="question" cols="20" rows="5" placeholder="Ваш вопрос" required minlength="10" id="feedback-form__user-question"></textarea>
@@ -273,7 +276,9 @@
       </form>
     </section>
   </div>
-  <script src="js/vendor.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-mask.js"></script>
   <script src="js/main.js"></script>
 </body>
 

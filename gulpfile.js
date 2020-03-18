@@ -88,8 +88,8 @@ gulp.task('copy-js', function () {
 gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
+    'source/js/**/*.js',
     'source/img/**',
-    'source/js/**',
     'source/*.ico',
     '!source/img/icon-*.svg'
   ], {
@@ -99,7 +99,7 @@ gulp.task('copy', function () {
 });
 
 gulp.task('clean', function () {
-  return del(['build/img/**', '!build/img']);
+  return del('build');
 });
 
 gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html'));
