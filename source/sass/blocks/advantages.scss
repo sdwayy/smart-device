@@ -1,7 +1,6 @@
 .advantages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-top: 114px;
   padding-bottom: 48px;
   padding-left: $desktop-flatten-padding;
@@ -27,11 +26,16 @@
   min-height: 299px;
   border: 1px solid #ebebeb;
   border-left: 3px solid $main-color;
+  margin-right: 33px;
   padding-top: 40px;
   padding-right: 41px;
   padding-bottom: 35px;
   padding-left: 43px;
   background-color: $second-color;
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+  }
 
   h3 {
     margin-top: 0;
@@ -67,6 +71,10 @@
   .advantages {
     padding-left: $desktop-percent-flatten-padding;
     padding-right: $desktop-percent-flatten-padding;
+
+    .advantages__item {
+      margin-right: 2.8%;
+    }
   }
 
   .advantages__item {
@@ -86,6 +94,7 @@
 
     .advantages__item {
       margin-bottom: 4%;
+      margin-right: 4%;
     }
   }
 
@@ -128,6 +137,7 @@
 
     .advantages__item {
       margin-bottom: 7%;
+      margin-right: 0;
     }
   }
 
