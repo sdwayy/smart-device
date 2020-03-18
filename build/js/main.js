@@ -36,7 +36,6 @@
     }
     return false;
   };
-
   var tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
   var mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
 

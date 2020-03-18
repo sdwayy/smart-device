@@ -12,6 +12,7 @@
   h2 {
     margin-top: 0;
     margin-bottom: 9px;
+    padding-right: 30px;
     font-family: $second-font;
     font-weight: normal;
     font-size: 36px;
@@ -21,20 +22,27 @@
   p {
     margin-top: 0;
     margin-bottom: 50px;
-    padding-left: 5px;
+    padding-right: 255px;
   }
 
   label[for="ask-form__user-name"],
   label[for="ask-form__user-phone"] {
-    width: 270px;
+    width: 47.5%;
   }
+}
+
+.ask-form__form {
+  width: 570px;
 }
 
 .ask-form__container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   padding-top: 89px;
   padding-bottom: 115px;
-  padding-left: 790px;
+  padding-left: 195px;
   padding-right: 195px;
   background-image: url("/img/ask-form-container-background.jpg");
   background-repeat: no-repeat;
@@ -48,20 +56,14 @@
 
 @media (max-width: $content-width) {
   .ask-form__container {
-    padding-left: 50.6%;
+    padding-left: 12.6%;
     padding-right: 12.6%;
-  }
-
-  .ask-form {
-    label[for="ask-form__user-name"],
-    label[for="ask-form__user-phone"] {
-      width: 47.4%;
-    }
   }
 }
 
 @media (max-width: $desktop-width) {
   .ask-form__container {
+    align-items: flex-start;
     padding-top: 10.5%;
     padding-right: 11.5%;
     padding-left: 11.5%;
@@ -74,13 +76,19 @@
 
     h2 {
       margin-bottom: 2.5%;
+      padding-right: 0;
       font-size: 32px;
       line-height: 140.32%;
     }
 
     p {
       margin-bottom: 9.2%;
+      padding-right: 0;
     }
+  }
+
+  .ask-form__form {
+    width: 100%;
   }
 }
 
