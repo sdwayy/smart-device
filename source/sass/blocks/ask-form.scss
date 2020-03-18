@@ -5,7 +5,7 @@
   background-position: right top 90px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("img/ask-form-triangles@2x.jpg");
+    background-image: url("../img/ask-form-triangles@2x.jpg");
     background-size: 278px 524px;
   }
 
@@ -44,13 +44,13 @@
   padding-bottom: 115px;
   padding-left: 195px;
   padding-right: 195px;
-  background-image: url("img/ask-form-container-background.jpg");
+  background-image: url("../img/ask-form-container-background.jpg");
   background-repeat: no-repeat;
   background-position: left 17px top;
   background-size: 42.6% 670px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("img/ask-form-container-background@2x.jpg");
+    background-image: url("../img/ask-form-container-background@2x.jpg");
   }
 }
 
