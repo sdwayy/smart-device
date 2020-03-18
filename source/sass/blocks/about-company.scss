@@ -5,13 +5,13 @@
   padding-bottom: 110px;
   padding-left: 375px;
   color: $description-font-color;
-  background-image: url("/img/date-desktop.jpg");
+  background-image: url("img/date-desktop.jpg");
   background-repeat: no-repeat;
   background-position: left 12% top 30px;
   background-size: 14.5% 72%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("/img/date-desktop@2x.jpg");
+    background-image: url("img/date-desktop@2x.jpg");
   }
 
   h2 {
@@ -46,12 +46,12 @@
     padding-right: 3%;
     padding-bottom: 10.6%;
     padding-left: 210px;
-    background-image: url("/img/date-tablet.jpg");
+    background-image: url("img/date-tablet.jpg");
     background-size: 240px 362px;
     background-position: left top 18px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/date-tablet@2x.jpg");
+      background-image: url("img/date-tablet@2x.jpg");
     }
 
     h2 {
