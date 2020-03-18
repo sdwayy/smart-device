@@ -6,13 +6,13 @@
   padding-bottom: 126px;
   padding-left: $desktop-fixed-padding;
   padding-right: $desktop-fixed-padding;
-  background-image: url("img/circuit-desktop.png"), url("img/promo-mask-desktop.png");
+  background-image: url("../img/circuit-desktop.png"), url("../img/promo-mask-desktop.png");
   background-repeat: no-repeat;
   background-position: right top 140px, right -180px top -120px;
   background-size: 45% 515px, 1920px 881px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("img/circuit-desktop@2x.png"), url("img/promo-mask-desktop@2x.png");
+    background-image: url("../img/circuit-desktop@2x.png"), url("../img/promo-mask-desktop@2x.png");
   }
 }
 
@@ -85,12 +85,12 @@
     padding-top: 110px;
     padding-left: 12%;
     padding-bottom: 165px;
-    background-image: url("img/circuit-tablet.png"), url("img/promo-mask-tablet.png");
+    background-image: url("../img/circuit-tablet.png"), url("../img/promo-mask-tablet.png");
     background-position: right top 35px, right -2px top -78px;
     background-size: 260px 340px, 770px 563px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("img/circuit-tablet@2x.png"), url("img/promo-mask-tablet@2x.png");
+      background-image: url("../img/circuit-tablet@2x.png"), url("../img/promo-mask-tablet@2x.png");
     }
   }
 
@@ -139,7 +139,7 @@
     padding-right: $mobile-padding;
     padding-bottom: 57px;
 
-    background-image: url("img/circuit-mobile.png"), url("img/promo-mask-mobile.png");
+    background-image: url("../img/circuit-mobile.png"), url("../img/promo-mask-mobile.png");
     background-position: right top 35px, right top -60px;
     background-size: auto;
   }

@@ -66,7 +66,7 @@
     width: 63px;
     height: 63px;
     background-color: $main-color;
-    background-image: url("img/arrow-btn-white.svg");
+    background-image: url("../img/arrow-btn-white.svg");
     background-size: 8px;
     background-repeat: no-repeat;
     background-position: right 45% center;
@@ -81,7 +81,7 @@
     &::after {
       transition: $transition-time;
       background-color: $second-color;
-      background-image: url("img/arrow-btn-blue.svg");
+      background-image: url("../img/arrow-btn-blue.svg");
       background-size: 12px;
     }
   }
@@ -93,30 +93,30 @@
 
   &--manufacturing {
     &::before {
-      background-image: url("img/manufacturing-desktop.jpg");
+      background-image: url("../img/manufacturing-desktop.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("img/manufacturing-desktop@2x.jpg");
+        background-image: url("../img/manufacturing-desktop@2x.jpg");
       }
     }
   }
 
   &--mounting {
     &::before {
-      background-image: url("img/mounting-desktop.jpg");
+      background-image: url("../img/mounting-desktop.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("img/mounting-desktop@2x.jpg");
+        background-image: url("../img/mounting-desktop@2x.jpg");
       }
     }
   }
 
   &--components {
     &::before {
-      background-image: url("img/components-desktop.jpg");
+      background-image: url("../img/components-desktop.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("img/components-desktop@2x.jpg");
+        background-image: url("../img/components-desktop@2x.jpg");
       }
     }
   }
@@ -170,7 +170,7 @@
 
       &::after {
         background-color: $main-color;
-        background-image: url("img/arrow-btn-white.svg");
+        background-image: url("../img/arrow-btn-white.svg");
         background-size: 8px;
       }
     }
