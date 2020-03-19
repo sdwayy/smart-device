@@ -1,6 +1,7 @@
 .site-nav {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   width: 450px;
   justify-items: baseline;
 
@@ -26,10 +27,6 @@
 }
 
 @media (max-width: $content-width) {
-  .page-footer__site-nav {
-    width: 31.9%;
-  }
-
   .site-nav__links-container {
     a {
       margin-right: 15.6%;
@@ -39,6 +36,8 @@
 
 @media (max-width: $desktop-width) {
   .site-nav {
+    width: auto;
+
     a {
       letter-spacing: normal;
     }

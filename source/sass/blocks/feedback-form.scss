@@ -1,7 +1,7 @@
 .feedback-form {
   position: relative;
-  width: 25.5%;
-  padding: 1.5% 2.1% 2.1% 2.1%;
+  width: 490px;
+  padding: 40px;
   background-color: $main-color;
 
   h2 {
@@ -30,7 +30,7 @@
   }
 
   label:last-of-type {
-    width: 95%;
+    width: 350px;
     min-height: 50px;
     margin-bottom: 0;
     order: 1;

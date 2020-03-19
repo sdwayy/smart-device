@@ -34,7 +34,6 @@
 
 .page-footer__container {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   padding-top: 65px;
   padding-bottom: 50px;
@@ -46,6 +45,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  flex-shrink: 0;
+  padding-right: 20px;
 }
 
 .page-footer__bottom {
@@ -84,14 +85,15 @@
   letter-spacing: 0.04em;
 }
 
+.page-footer__site-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: $content-width) {
   .page-footer__container {
     padding-left: $desktop-percent-padding;
     padding-right: $desktop-percent-padding;
-  }
-
-  .page-footer__site-nav {
-    width: 40%;
   }
 
   .page-footer__bottom-wrapper {

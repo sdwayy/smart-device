@@ -5,6 +5,7 @@
   var MAX_TABLET_WIDTH = 1023;
   var MAX_MOBILE_WIDTH = 767;
 
+  var $ = window.$;
   var aboutCompany = document.querySelector('.about-company');
   var aboutCompanyHiddenParts = aboutCompany.getElementsByTagName('span');
   var siteNav = document.querySelector('.site-nav');
@@ -21,13 +22,13 @@
   var feedbackFormUserMessage = feedbackForm.querySelector('textarea');
   var promoBtn = document.querySelector('.promo__btn');
   var pageFooter = document.querySelector('.page-footer');
-  var copyRightDate = pageFooter.querySelector('.page-footer__copyright-date');
+  var copyrightDate = pageFooter.querySelector('.page-footer__copyright-date');
   var footerLogo = pageFooter.querySelector('.page-footer__logo');
   var body = document.querySelector('body');
   var advantagesBlockAnchor = document.querySelector('.promo__scroll-btn');
   var phoneInputs = document.querySelectorAll('input[type="tel"]');
 
-  var onPhineInputsFocus = function (evt) {
+  var onPhoneInputsFocus = function (evt) {
     var inputValue = evt.currentTarget.value;
 
     if (!inputValue) {
@@ -44,16 +45,6 @@
     });
   };
 
-  var onConsultationAnchorClick = function (evt) {
-    evt.preventDefault();
-    addSmoothScrollFromAnchorToBlock(promoBtn);
-  };
-
-  var onAdvantagesBlockAnchorClick = function (evt) {
-    evt.preventDefault();
-    addSmoothScrollFromAnchorToBlock(advantagesBlockAnchor);
-  };
-
   var getMaxMediaExpression = function (maxWidth) {
     return ('(max-width: ' + maxWidth + 'px)');
   };
@@ -65,111 +56,155 @@
     }
     return false;
   };
+
   var tabletMaxMediaExpression = getMaxMediaExpression(MAX_TABLET_WIDTH);
   var mobileMaxMediaExpression = getMaxMediaExpression(MAX_MOBILE_WIDTH);
 
-  var closeOverlay = function () {
-    overlay.classList.add('visually-hidden');
-    closeOverlayBtn.removeEventListener('click', closeOverlayBtnClick);
-    document.removeEventListener('keydown', onEscPress);
-    saveInStorage('user-name', feedbackFormUserName.value);
-    saveInStorage('user-tel', feedbackFormUserPhone.value);
-    saveInStorage('user-message', feedbackFormUserMessage.value);
-    body.style.overflow = 'visible';
-  };
+  if (overlay) {
+    var onEscPress = function (evt) {
+      if (evt.keyCode === ESC_KEYCODE) {
+        closeOverlay();
+      }
+    };
 
-  var onEscPress = function (evt) {
-    if (evt.keyCode === ESC_KEYCODE) {
+    var onOverlayClick = function (evt) {
+      if (evt.target === overlay) {
+        closeOverlay();
+      }
+    };
+
+    var closeOverlayBtnClick = function () {
       closeOverlay();
+    };
+
+    var onRequestCallBtnClick = function () {
+      openOverlay();
+    };
+
+    var openOverlay = function () {
+      document.addEventListener('keydown', onEscPress);
+      overlay.classList.remove('visually-hidden');
+      feedbackFormUserName.focus();
+      closeOverlayBtn.addEventListener('click', closeOverlayBtnClick);
+      overlay.addEventListener('click', onOverlayClick);
+      body.style.overflow = 'hidden';
+    };
+
+    var closeOverlay = function () {
+      overlay.classList.add('visually-hidden');
+      closeOverlayBtn.removeEventListener('click', closeOverlayBtnClick);
+      document.removeEventListener('keydown', onEscPress);
+      saveInStorage('user-name', feedbackFormUserName.value);
+      saveInStorage('user-tel', feedbackFormUserPhone.value);
+      saveInStorage('user-message', feedbackFormUserMessage.value);
+      body.style.overflow = 'visible';
+    };
+  }
+
+  if (siteNavLinksContainer) {
+    var onListBtnClick = function (listBtn) {
+      listBtn.classList.toggle('list-btn--active');
+
+      if (listBtn.parentElement === siteNav) {
+        siteNavLinksContainer.classList.toggle('visually-hidden');
+      }
+
+      if (listBtn.parentElement === address) {
+        addressContainer.classList.toggle('visually-hidden');
+      }
+    };
+  }
+
+  if (promoBtn) {
+    var onConsultationAnchorClick = function (evt) {
+      evt.preventDefault();
+      addSmoothScrollFromAnchorToBlock(promoBtn);
+    };
+
+    promoBtn.addEventListener('click', onConsultationAnchorClick);
+  }
+
+  if (advantagesBlockAnchor) {
+    var onAdvantagesBlockAnchorClick = function (evt) {
+      evt.preventDefault();
+      addSmoothScrollFromAnchorToBlock(advantagesBlockAnchor);
+    };
+
+    advantagesBlockAnchor.addEventListener('click', onAdvantagesBlockAnchorClick);
+  }
+
+  if (requestCallBtn) {
+    requestCallBtn.addEventListener('click', onRequestCallBtnClick);
+  }
+
+  if (phoneInputs.length > 0) {
+    for (var phoneInputIndex = 0; phoneInputIndex < phoneInputs.length; phoneInputIndex++) {
+      var currentInput = phoneInputs[phoneInputIndex];
+
+      $(currentInput).mask('+7(999)999-9999');
+
+      currentInput.addEventListener('focus', function (evt) {
+        onPhoneInputsFocus(evt);
+      });
     }
-  };
-
-  var openOverlay = function () {
-    document.addEventListener('keydown', onEscPress);
-    overlay.classList.remove('visually-hidden');
-    feedbackFormUserName.focus();
-    closeOverlayBtn.addEventListener('click', closeOverlayBtnClick);
-    overlay.addEventListener('click', onOverlayClick);
-    body.style.overflow = 'hidden';
-  };
-
-  var onOverlayClick = function (evt) {
-    if (evt.target === overlay) {
-      closeOverlay();
-    }
-  };
-
-  var closeOverlayBtnClick = function () {
-    closeOverlay();
-  };
-
-  var onRequestCallBtnClick = function () {
-    openOverlay();
-  };
-
-  var onListBtnClick = function (listBtn) {
-    listBtn.classList.toggle('list-btn--active');
-
-    if (listBtn.parentElement === siteNav) {
-      siteNavLinksContainer.classList.toggle('visually-hidden');
-    }
-
-    if (listBtn.parentElement === address) {
-      addressContainer.classList.toggle('visually-hidden');
-    }
-  };
-
-  requestCallBtn.addEventListener('click', onRequestCallBtnClick);
-  promoBtn.addEventListener('click', onConsultationAnchorClick);
-  advantagesBlockAnchor.addEventListener('click', onAdvantagesBlockAnchorClick);
-
-  for (var phoneInputIndex = 0; phoneInputIndex < phoneInputs.length; phoneInputIndex++) {
-    var currentInput = phoneInputs[phoneInputIndex];
-
-    $(currentInput).mask('+7(999)999-9999');
-
-    currentInput.addEventListener('focus', function (evt) {
-      onPhineInputsFocus(evt);
-    });
   }
 
   if (window.matchMedia(tabletMaxMediaExpression).matches) {
-    var copyRightCopy = copyRightDate.cloneNode(true);
+    if (copyrightDate) {
+      var copyRightCopy = copyrightDate.cloneNode(true);
 
-    copyRightDate.remove();
-    copyRightCopy.classList.add('page-footer__copyright-date--mobile');
-    copyRightCopy.children[0].classList.add('visually-hidden');
-    footerLogo.after(copyRightCopy);
+      copyrightDate.remove();
+      copyRightCopy.classList.add('page-footer__copyright-date--mobile');
+      copyRightCopy.children[0].classList.add('visually-hidden');
+      footerLogo.after(copyRightCopy);
+    }
 
-    requestCallBtn.removeEventListener('click', onRequestCallBtnClick);
-    overlay.removeEventListener('click', onOverlayClick);
+    if (requestCallBtn) {
+      requestCallBtn.removeEventListener('click', onRequestCallBtnClick);
+    }
 
-    for (
-      var hiddenPartIndex = 0;
-      hiddenPartIndex < aboutCompanyHiddenParts.length;
-      hiddenPartIndex++
-    ) {
-      aboutCompanyHiddenParts[hiddenPartIndex].textContent = '..';
+    if (overlay) {
+      overlay.removeEventListener('click', onOverlayClick);
+    }
+
+    if (aboutCompanyHiddenParts) {
+      for (
+        var hiddenPartIndex = 0;
+        hiddenPartIndex < aboutCompanyHiddenParts.length;
+        hiddenPartIndex++
+      ) {
+        aboutCompanyHiddenParts[hiddenPartIndex].textContent = '..';
+      }
     }
   }
 
   if (window.matchMedia(mobileMaxMediaExpression).matches) {
-    siteNavLinksContainer.classList.add('visually-hidden');
-    addressContainer.classList.add('visually-hidden');
-    promoBtn.textContent = 'Бесплатная консультация';
+    if (siteNavLinksContainer) {
+      siteNavLinksContainer.classList.add('visually-hidden');
+    }
 
-    for (
-      var listBtnIndex = 0;
-      listBtnIndex < listBtns.length;
-      listBtnIndex++
-    ) {
-      var currentBtn = listBtns[listBtnIndex];
+    if (addressContainer) {
+      addressContainer.classList.add('visually-hidden');
+    }
 
-      currentBtn.classList.remove('list-btn--no-js');
-      currentBtn.classList.add('list-btn--js');
-      currentBtn.addEventListener('click', function (evt) {
-        onListBtnClick(evt.currentTarget);
-      });
+    if (promoBtn) {
+      promoBtn.textContent = 'Бесплатная консультация';
+    }
+
+    if (listBtns) {
+      for (
+        var listBtnIndex = 0;
+        listBtnIndex < listBtns.length;
+        listBtnIndex++
+      ) {
+        var currentBtn = listBtns[listBtnIndex];
+
+        currentBtn.classList.remove('list-btn--no-js');
+        currentBtn.classList.add('list-btn--js');
+        currentBtn.addEventListener('click', function (evt) {
+          onListBtnClick(evt.currentTarget);
+        });
+      }
     }
   }
 })();
