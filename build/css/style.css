@@ -597,7 +597,7 @@ img {
 
 .checkbox {
   stroke: #ffffff; }
-  .checkbox:hover {
+  .checkbox:hover, .checkbox:focus {
     opacity: 0.7; }
   .checkbox:active {
     opacity: 0.4; }

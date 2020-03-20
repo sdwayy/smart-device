@@ -1,7 +1,8 @@
 .checkbox {
   stroke: $second-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: $hover-state-opacity;
   }
 
