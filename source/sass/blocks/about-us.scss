@@ -28,15 +28,15 @@
 
   .no-webp .about-us {
     background-image: url("../img/triangle-advantage-tablet.jpg");
-  
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/triangle-advantage-tablet@2x.jpg");
     }
   }
-  
+
   .webp .about-us {
     background-image: url("../img/triangle-advantage-tablet.webp");
-  
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/triangle-advantage-tablet@2x.webp");
     }
@@ -52,7 +52,7 @@
   .no-webp .about-us {
     background-image: url("../img/triangle-advantage-mobile.jpg");
   }
-  
+
   .webp .about-us {
     background-image: url("../img/triangle-advantage-mobile.webp");
   }

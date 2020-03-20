@@ -30,7 +30,7 @@
   width: 570px;
 }
 
-.no-webp .ask-form  {
+.no-webp .ask-form {
   background-image: url("../img/ask-form-triangles.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -38,7 +38,7 @@
   }
 }
 
-.webp .ask-form  {
+.webp .ask-form {
   background-image: url("../img/ask-form-triangles.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

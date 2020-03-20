@@ -23,15 +23,15 @@
 @media (max-width: $desktop-width) {
   .no-webp .header-container {
     background-image: url("../img/header-background-tablet.jpg");
-  
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/header-background-tablet@2x.jpg");
     }
   }
-  
+
   .webp .header-container {
     background-image: url("../img/header-background-tablet.webp");
-  
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/header-background-tablet@2x.webp");
     }
@@ -42,7 +42,7 @@
   .no-webp .header-container {
     background-image: url("../img/header-background-mobile.jpg");
   }
-  
+
   .webp .header-container {
     background-image: url("../img/header-background-mobile.webp");
   }

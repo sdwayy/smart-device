@@ -102,15 +102,15 @@
 
   .no-webp .promo {
     background-image: url("../img/circuit-tablet.png"), url("../img/promo-mask-tablet.png");
-  
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/circuit-tablet@2x.png"), url("../img/promo-mask-tablet@2x.png");
     }
   }
-  
+
   .webp .promo {
     background-image: url("../img/circuit-tablet.webp"), url("../img/promo-mask-tablet.webp");
-  
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/circuit-tablet@2x.webp"), url("../img/promo-mask-tablet@2x.webp");
     }
@@ -167,7 +167,7 @@
   .no-webp .promo {
     background-image: url("../img/circuit-mobile.png"), url("../img/promo-mask-mobile.png");
   }
-  
+
   .webp .promo {
     background-image: url("../img/circuit-mobile.webp"), url("../img/promo-mask-mobile.webp");
   }
