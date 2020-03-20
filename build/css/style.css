@@ -1539,7 +1539,9 @@ input[type="checkbox"]:checked + .checkbox > .checkbox__state--checked {
     padding-right: 4.8%; }
   .page-footer__bottom-wrapper {
     padding-left: 4.8%;
-    padding-right: 4.8%; } }
+    padding-right: 4.8%; }
+  .page-footer__address {
+    width: 25.2%; } }
 
 @media (max-width: 1023px) {
   .page-footer__container {
