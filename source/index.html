@@ -13,6 +13,7 @@
   <link rel="preload" href="./fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -144,7 +145,7 @@
             <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20" id="ask-form__user-name">
           </label>
           <label for="ask-form__user-phone" aria-label="Введите ваш телефон">
-            <input type="tel" name="user-phone" placeholder="Телефон" required minlength="9" maxlength="14"
+            <input type="tel" name="user-phone" placeholder="Телефон" required minlength="13" maxlength="14"
               id="ask-form__user-phone">
           </label>
           <label for="ask-form__user-question" aria-label="Введите ваш вопрос">
@@ -254,10 +255,10 @@
           <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20" id="feedback-form__user-name">
         </label>
         <label for="feedback-form__user-phone" aria-label="Введите ваш телефон">
-          <input type="tel" name="user-phone" placeholder="Телефон" required minlength="9" maxlength="14" id="feedback-form__user-phone">
+          <input type="tel" name="user-phone" placeholder="Телефон" required minlength="13" maxlength="14" id="feedback-form__user-phone">
         </label>
         <label for="feedback-form__user-question" aria-label="Введите ваш вопрос">
-          <textarea name="question" cols="20" rows="5" placeholder="Ваш вопрос" required minlength="10" id="feedback-form__user-question"></textarea>
+          <textarea name="question" cols="20" rows="5" placeholder="Ваш вопрос" required id="feedback-form__user-question"></textarea>
         </label>
         <label tabindex="0">
           <input type="checkbox" name="pesronal-data-consent" tabindex="-1"  required checked>
@@ -267,9 +268,9 @@
             </svg>
             Я согласен на обработку персональных данных
         </label>
-        <button type="submit" class="btn btn--color-with-border">Задать вопрос</button>
+        <button type="submit" class="btn btn--color-with-border">Отправить</button>
         <button class="feedback-form__close-btn close-btn" type="reset" aria-label="Закрыть окно">
-          <svg width="20" height="20">
+          <svg width="20" height="20" viewbox="0 0 20 20">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
           </svg>
         </button>

@@ -90,7 +90,9 @@
     opacity: $active-state-opacity;
     transition: $transition-time;
   }
+}
 
+.no-webp .goods-and-services__item {
   &--manufacturing {
     &::before {
       background-image: url("../img/manufacturing-desktop.jpg");
@@ -117,6 +119,38 @@
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/components-desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+.webp .goods-and-services__item {
+  &--manufacturing {
+    &::before {
+      background-image: url("../img/manufacturing-desktop.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/manufacturing-desktop@2x.webp");
+      }
+    }
+  }
+
+  &--mounting {
+    &::before {
+      background-image: url("../img/mounting-desktop.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/mounting-desktop@2x.webp");
+      }
+    }
+  }
+
+  &--components {
+    &::before {
+      background-image: url("../img/components-desktop.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/components-desktop@2x.webp");
       }
     }
   }
@@ -175,6 +209,70 @@
       }
     }
   }
+
+  .no-webp .goods-and-services__item {
+    &--manufacturing {
+      &::before {
+        background-image: url("../img/manufacturing-tablet.jpg");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/manufacturing-tablet@2x.jpg");
+        }
+      }
+    }
+
+    &--mounting {
+      &::before {
+        background-image: url("../img/mounting-tablet.jpg");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/mounting-tablet@2x.jpg");
+        }
+      }
+    }
+
+    &--components {
+      &::before {
+        background-image: url("../img/components-tablet.jpg");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/components-tablet@2x.jpg");
+        }
+      }
+    }
+  }
+  
+  .webp .goods-and-services__item {
+    &--manufacturing {
+      &::before {
+        background-image: url("../img/manufacturing-tablet.webp");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/manufacturing-tablet@2x.webp");
+        }
+      }
+    }
+
+    &--mounting {
+      &::before {
+        background-image: url("../img/mounting-tablet.webp");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/mounting-tablet@2x.webp");
+        }
+      }
+    }
+
+    &--components {
+      &::before {
+        background-image: url("../img/components-tablet.webp");
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/components-tablet@2x.webp");
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -196,5 +294,45 @@
     padding-bottom: 7.5%;
     padding-right: 30%;
     padding-left: 14%;
+  }
+
+  .no-webp .goods-and-services__item {
+    &--manufacturing {
+      &::before {
+        background-image: url("../img/manufacturing-mobile.jpg");
+      }
+    }
+
+    &--mounting {
+      &::before {
+        background-image: url("../img/mounting-mobile.jpg");
+      }
+    }
+
+    &--components {
+      &::before {
+        background-image: url("../img/components-mobile.jpg");
+      }
+    }
+  }
+  
+  .webp .goods-and-services__item {
+    &--manufacturing {
+      &::before {
+        background-image: url("../img/manufacturing-mobile.webp");
+      }
+    }
+
+    &--mounting {
+      &::before {
+        background-image: url("../img/mounting-mobile.webp");
+      }
+    }
+
+    &--components {
+      &::before {
+        background-image: url("../img/components-mobile.webp");
+      }
+    }
   }
 }

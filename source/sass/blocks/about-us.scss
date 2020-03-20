@@ -1,31 +1,59 @@
 .about-us {
-  background-image: url("../img/advantage-background-desktop.jpg");
   background-position: 23% top;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.no-webp .about-us {
+  background-image: url("../img/advantage-background-desktop.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/advantage-background-desktop@2x.jpg");
   }
 }
 
+.webp .about-us {
+  background-image: url("../img/advantage-background-desktop.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-background-desktop@2x.webp");
+  }
+}
 
 @media (max-width: $desktop-width) {
   .about-us {
-    background-image: url("../img/triangle-advantage-tablet.jpg");
     background-position: right -10px top 40.6%;
     background-size: 297px 590px;
+  }
 
+  .no-webp .about-us {
+    background-image: url("../img/triangle-advantage-tablet.jpg");
+  
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/triangle-advantage-tablet@2x.jpg");
+    }
+  }
+  
+  .webp .about-us {
+    background-image: url("../img/triangle-advantage-tablet.webp");
+  
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/triangle-advantage-tablet@2x.webp");
     }
   }
 }
 
 @media (max-width: $tablet-width) {
   .about-us {
-    background-image: url("../img/triangle-advantage-mobile.jpg");
     background-size: 175px 559px;
     background-position: right 63.2%;
+  }
+
+  .no-webp .about-us {
+    background-image: url("../img/triangle-advantage-mobile.jpg");
+  }
+  
+  .webp .about-us {
+    background-image: url("../img/triangle-advantage-mobile.webp");
   }
 }

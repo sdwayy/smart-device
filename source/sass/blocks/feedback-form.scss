@@ -1,12 +1,19 @@
 .feedback-form {
   position: relative;
   width: 490px;
-  padding: 40px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 23px;
   background-color: $main-color;
+
+  form {
+    padding-left: 0;
+  }
 
   h2 {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-family: $second-font;
     font-weight: normal;
     font-size: 28px;
@@ -16,7 +23,7 @@
   p {
     margin-top: 0;
     margin-bottom: 32px;
-    padding-right: 1.5%;
+    padding-right: 20px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -26,24 +33,44 @@
   input[type="text"],
   input[type="tel"],
   textarea {
-    width: 100%;
+    padding: 0 25px 5px 23px;
+  }
+
+  textarea {
+    height: 104px;
+    padding-top: 15px;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    height: 51.83px;
+  }
+
+  label {
+    margin-bottom: 30px;
   }
 
   label:last-of-type {
-    width: 350px;
+    width: 370px;
     min-height: 50px;
     margin-bottom: 0;
+    padding-left: 48px;
+    padding-right: 0;
     order: 1;
   }
 
   button[type="submit"] {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   button[type="reset"] {
-    width: 17px;
-    height: 17px;
+    position: absolute;
+    top: -138px;
+    right: -23px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
     border: none;
     background-color: transparent;
 
@@ -53,10 +80,4 @@
       transition: $transition-time;
     }
   }
-}
-
-.feedback-form__close-btn {
-  position: absolute;
-  top: -135px;
-  right: -20px;
 }

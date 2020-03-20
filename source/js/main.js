@@ -12,7 +12,6 @@
   var siteNavLinksContainer = siteNav.querySelector('.site-nav__links-container');
   var address = document.querySelector('.address');
   var addressContainer = address.querySelector('.address__container');
-  var listBtns = document.querySelectorAll('.page-footer_list-btn');
   var requestCallBtn = document.querySelector('.header__request-call-btn');
   var overlay = document.querySelector('.overlay');
   var closeOverlayBtn = overlay.querySelector('.close-btn');
@@ -36,13 +35,11 @@
     }
   };
 
-  var addSmoothScrollFromAnchorToBlock = function (anchor) {
-    var blockId = anchor.getAttribute('href').substr(1);
+  var onAnchorClick = function (anchor) {
+    var block = $(anchor).attr('href');
 
-    document.getElementById(blockId).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+    $('html, body').animate({scrollTop: $(block).offset().top + 'px'});
+    return false;
   };
 
   var getMaxMediaExpression = function (maxWidth) {
@@ -101,33 +98,38 @@
     };
   }
 
-  if (siteNavLinksContainer) {
-    var onListBtnClick = function (listBtn) {
-      listBtn.classList.toggle('list-btn--active');
+  var accordionLogic = function (element, linksContainer) {
+    if (element) {
+      var listBtn = element.querySelector('.list-btn');
 
-      if (listBtn.parentElement === siteNav) {
-        siteNavLinksContainer.classList.toggle('visually-hidden');
+      if (listBtn) {
+        listBtn.classList.remove('list-btn--no-js');
       }
 
-      if (listBtn.parentElement === address) {
-        addressContainer.classList.toggle('visually-hidden');
-      }
-    };
-  }
+      var onElementClick = function (evt) {
+        if (evt.currentTarget === element) {
+          linksContainer.classList.toggle('visually-hidden');
+          listBtn.classList.toggle('list-btn--active');
+        }
+      };
+
+      element.addEventListener('click', function (evt) {
+        onElementClick(evt);
+      });
+    }
+  };
 
   if (promoBtn) {
-    var onConsultationAnchorClick = function (evt) {
-      evt.preventDefault();
-      addSmoothScrollFromAnchorToBlock(promoBtn);
+    var onConsultationAnchorClick = function () {
+      onAnchorClick(promoBtn);
     };
 
     promoBtn.addEventListener('click', onConsultationAnchorClick);
   }
 
   if (advantagesBlockAnchor) {
-    var onAdvantagesBlockAnchorClick = function (evt) {
-      evt.preventDefault();
-      addSmoothScrollFromAnchorToBlock(advantagesBlockAnchor);
+    var onAdvantagesBlockAnchorClick = function () {
+      onAnchorClick(advantagesBlockAnchor);
     };
 
     advantagesBlockAnchor.addEventListener('click', onAdvantagesBlockAnchorClick);
@@ -179,6 +181,9 @@
   }
 
   if (window.matchMedia(mobileMaxMediaExpression).matches) {
+    accordionLogic(siteNav, siteNavLinksContainer);
+    accordionLogic(address, addressContainer);
+
     if (siteNavLinksContainer) {
       siteNavLinksContainer.classList.add('visually-hidden');
     }
@@ -189,22 +194,6 @@
 
     if (promoBtn) {
       promoBtn.textContent = 'Бесплатная консультация';
-    }
-
-    if (listBtns) {
-      for (
-        var listBtnIndex = 0;
-        listBtnIndex < listBtns.length;
-        listBtnIndex++
-      ) {
-        var currentBtn = listBtns[listBtnIndex];
-
-        currentBtn.classList.remove('list-btn--no-js');
-        currentBtn.classList.add('list-btn--js');
-        currentBtn.addEventListener('click', function (evt) {
-          onListBtnClick(evt.currentTarget);
-        });
-      }
     }
   }
 })();
