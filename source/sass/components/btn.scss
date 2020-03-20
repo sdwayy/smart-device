@@ -9,7 +9,8 @@
   letter-spacing: 0.05em;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     transition: $transition-time;
   }
 
@@ -26,7 +27,8 @@
     line-height: 16px;
     background-color: transparent;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $main-color;
     }
   }
@@ -36,7 +38,8 @@
     border-color: $main-color;
     color: $main-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $second-color;
     }
   }
@@ -45,7 +48,8 @@
     border-color: $second-color;
     color: $second-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: $main-color;
     }
   }
@@ -61,7 +65,8 @@
     color: $second-color;
     background-color: $main-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border: 1px solid $second-color;
       background-color: transparent;
     }
@@ -75,7 +80,8 @@
     color: $second-color;
     background-color: $main-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: $main-color;
       background-color: $second-color;
       color: $main-color;

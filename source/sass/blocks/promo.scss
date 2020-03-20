@@ -78,7 +78,8 @@
   opacity: 0.5;
   transform: rotate(-90deg) translateY(-40px);
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
     transition: $transition-time;
   }

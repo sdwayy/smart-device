@@ -21,7 +21,8 @@
   align-items: center;
   margin-right: 50px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: $hover-state-opacity;
     transition: $transition-time;
   }

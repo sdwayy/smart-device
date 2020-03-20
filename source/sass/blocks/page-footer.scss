@@ -21,7 +21,8 @@
     @include link;
     color: rgba(27, 45, 55, 0.5);
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: $hover-state-opacity;
       color: $main-color;
     }

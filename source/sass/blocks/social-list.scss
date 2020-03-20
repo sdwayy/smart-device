@@ -17,7 +17,8 @@
 .social-list__link-icon {
   fill: #cdcdcd;
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: $main-color;
   }
 

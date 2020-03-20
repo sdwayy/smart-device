@@ -72,7 +72,8 @@
     background-position: right 45% center;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::before {
       opacity: $hover-state-opacity;
       transition: $transition-time;
