@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Supergym
 Adaptive and retina, lighthouse, crossBrowser optimized landing page.
 > [Preview link](https://sdwayy.github.io/smart-device/)
@@ -10,3 +11,6 @@ Adaptive and retina, lighthouse, crossBrowser optimized landing page.
 * *Запуск локального сервера* - `npm start`
 * *Сборка проекта без запуска локального сервера* -  `npm run build`
 * *Запуск тестирования на соответствия код-гайдам* - `npm test`
+=======
+
+>>>>>>> e1e256316e26c37346ccc8f01920b168dfe71d36
